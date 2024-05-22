@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/public/css/sidebar.css" />
+    <link rel="stylesheet" href="/public/css/comment.css" />
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="/public/images/logo-cookchat.png"
+      type="image/x-icon"
+    />
+
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <!-- sidebar -->
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <a href="">
+              <img src="/public/images/logo-cookchat.png" alt="logo" />
+            </a>
+          </span>
+
+          <div class="text header-text">
+            <a href="#">
+              <span class="name">COOKCHAT</span>
+            </a>
+          </div>
+        </div>
+
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <i class="bx bx-search icon"></i>
+            <input type="text" placeholder="Search..." />
+          </li>
+
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-bowl-hot icon"></i>
+                <span class="text nav-text">Recipes</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-bookmark icon"></i>
+                <span class="text nav-text">Save</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bxs-plus-square icon"></i>
+                <span class="text nav-text">Create Post</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#" class="dropdown-toggle">
+                <i class="bx bx-group icon"></i>
+                <span class="text nav-text">Communities</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="/profile" class="dropdown-toggle">
+                <i class="icon"
+                  ><img src="/public/images/profile.png" width="30px"
+                /></i>
+                <span class="text nav-text">Kanna Kamui</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-content">
+          <li class="">
+            <a href="#">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Log out</span>
+            </a>
+          </li>
+
+          <li class="mode">
+            <div class="moon-sun">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+
+            <span class="mode-text text">Dark Mode</span>
+
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- nav bottom -->
+
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">COOKCHAT</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#search" class="nav__link">
+                <i class="bx bx-search nav__icon"></i>
+                <span class="nav__name">Search</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#create" class="nav__link">
+                <i class="bx bx-plus-circle nav__icon"></i>
+                <span class="nav__name">Create</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#recipes" class="nav__link">
+                <i class="bx bx-bowl-hot nav__icon"></i>
+                <span class="nav__name">Recipes</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#profile" class="nav__link">
+                <img
+                  src="/public/images/profile.png"
+                  width="25px"
+                  class="nav__icon"
+                />
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- <img src="/images/user-img.jpg" class="nav__img" width="40px"> -->
+      </nav>
+    </header>
+
+    <div class="hero">
+      <nav>
+        <ul class="notification-drop">
+          <li class="item">
+            <i class="bx bxs-bell notification-bell" aria-hidden="true"></i>
+            <span class="btn__badge pulse-button">4</span>
+
+            <ul>
+              <li>First Item</li>
+              <li>Second Item</li>
+              <li>Third Item</li>
+            </ul>
+          </li>
+        </ul>
+
+        <img
+          src="/public/images/user-img.jpg"
+          width="40px"
+          alt="profile"
+          class="user-pic"
+          onclick="toggleMenus()"
+        />
+
+        <div class="sub-menus-wrap" id="subMenus">
+          <div class="sub-menus">
+            <div class="user-info">
+              <a href="" class="sub-menus-link">
+                <img
+                  src="/public/images/profile.png"
+                  alt="profile"
+                  class="profile-pic"
+                />
+                <h3>Kanna Kamui</h3>
+              </a>
+            </div>
+            <hr />
+
+            <a href="#" class="sub-menus-link">
+              <i class="bx bx-cog"></i>
+              <p>Settings</p>
+            </a>
+
+            <a href="#" class="sub-menus-link">
+              <i class="bx bxs-dashboard"></i>
+              <p>Admin</p>
+            </a>
+
+            <a href="#" class="sub-menus-link" id="darkModeToggle">
+              <i class="bx bx-moon"></i>
+              <p>Switch Theme</p>
+            </a>
+
+            <a href="#" class="sub-menus-link">
+              <i class="bx bx-help-circle"></i>
+              <p>Help & Support</p>
+            </a>
+
+            <a href="#" class="sub-menus-link">
+              <i class="bx bx-log-out"></i>
+              <p>Log Out</p>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <section class="home">
+        <div class="text">Comment Section</div>
+
+          <template class="reply-input-template">
+    <div class="reply-input container7">
+      <img src="/public/images/profile.png" alt="" class="usr-img">
+      <textarea class="cmnt-input" placeholder="Add a comment..."></textarea>
+      <button class="bu-primary">SEND</button>
+    </div>
+  </template>
+
+  <template class="comment-template">
+    <div class="comment-wrp">
+      <div class="comment container7">
+        <div class="c-score">
+          <img src="/public/images/images/icon-plus.svg" alt="plus" class="score-control score-plus">
+          <p class="score-number">5</p>
+          <img src="/public/images/images/icon-minus.svg" alt="minus" class="score-control score-minus">
+        </div>
+        <div class="c-controls">
+          <a  class="delete"><img src="/public/images/images/icon-delete.svg" alt="" class="control-icon">Delete</a>
+          <a  class="edit"><img src="/public/images/images/icon-edit.svg" alt="" class="control-icon">Edit</a>
+          <a  class="reply"><img src="/public/images/images/icon-reply.svg" alt="" class="control-icon">Reply</a>
+        </div>
+        <div class="c-user">
+          <img src="/public/images/profile.png" alt="" class="usr-img">
+          <p class="usr-name">Kanna Kamui</p>
+          <p class="cmnt-at">2 weeks ago</p>    
+        </div>
+        <p class="c-text">
+          <span class="reply-to"></span>
+          <span class="c-body"></span>
+        </p>
+      </div><!--comment-->
+      <div class="replies comments-wrp">
+      </div><!--replies-->
+    </div>
+  </template>
+<main>
+  <div class="comment-section">
+
+    <div class="comments-wrp">
+
+    </div> <!--commentS wrapper-->
+  <div class="reply-input container7">
+      <img src="/public/images/profile.png" alt="" class="usr-img">
+      <textarea class="cmnt-input" placeholder="Add a comment..."></textarea>
+      <button class="bu-primary">SEND</button>
+    </div> <!--reply input-->
+  </div> <!--comment sectio-->
+  
+  <div class="modal-wrp invisible">
+    <div class="modal container7">
+      <h3>Delete comment</h3>
+      <p>Are you sure you want to delete this comment? This will remove the comment and cant be undone</p>
+      <button class="yes">YES,DELETE</button>
+      <button class="no">NO,CANCEL</button>
+    </div>
+  </div>
+</main>
+
+    <script src="/public/javascript/comment.js"></script>
+    <script src="/public/javascript/sidebar.js"></script>
+    <!-- <script src="/index.js"></script> -->
+  </body>
+</html>

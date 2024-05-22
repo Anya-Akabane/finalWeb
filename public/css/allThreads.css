@@ -1,0 +1,190 @@
+.threads-row {
+  position: relative;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 35rem 35rem;
+  grid-gap: 3rem;
+  top: 13rem;
+}
+
+.thread-card {
+  padding: 10px 20px;
+  width: 35rem;
+  height: 130px;
+  border-radius: 15px;
+}
+
+.viewThread-button {
+  text-align: center;
+  color: #f03167;
+  background-color: #fdd9e5;
+  padding: 10px 10rem;
+  border-radius: 10px;
+}
+
+.more-option {
+  font-size: x-large;
+  margin-left: 1.5rem;
+  color: gray;
+}
+
+.view-more {
+  padding: 15px;
+}
+
+.image-text {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.pin-item {
+  margin-left: auto;
+  margin-right: 2rem;
+  font-size: x-large;
+  color: gray;
+}
+
+/* Mobile view */
+@media screen and (max-width: 600px) {
+  .threads-row {
+    position: relative;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 23rem;
+    grid-gap: 1.5rem;
+    top: 10rem;
+  }
+
+  .thread-card {
+    padding: 10px 20px;
+    width: 23rem;
+    height: 130px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .viewThread-button {
+    text-align: center;
+    color: #f03167;
+    background-color: #fdd9e5;
+    padding: 10px 4rem;
+    border-radius: 10px;
+  }
+
+  .more-option {
+    font-size: x-large;
+    margin-left: 1rem;
+  }
+
+  .view-more {
+    padding: 15px;
+  }
+}
+
+/* Other screen size responsive */
+
+@media screen and (min-width: 2160px) {
+  .threads-row {
+    position: relative;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 42rem 42rem 42rem;
+    grid-gap: 3rem;
+    top: 13rem;
+  }
+
+  .thread-card {
+    padding: 10px 20px;
+    width: 42rem;
+    height: 130px;
+    border-radius: 15px;
+  }
+
+  .viewThread-button {
+    text-align: center;
+    color: #f03167;
+    background-color: #fdd9e5;
+    padding: 10px 10.8rem;
+    border-radius: 10px;
+  }
+
+  .more-option {
+    font-size: x-large;
+    margin-left: 6.5rem;
+  }
+
+  .view-more {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2159px) {
+  .threads-row {
+    position: relative;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 45rem 45rem;
+    grid-gap: 3rem;
+    top: 13rem;
+  }
+
+  .thread-card {
+    padding: 10px 20px;
+    width: 45rem;
+    height: 130px;
+    border-radius: 15px;
+  }
+
+  .viewThread-button {
+    text-align: center;
+    color: #f03167;
+    background-color: #fdd9e5;
+    padding: 10px 12.3rem;
+    border-radius: 10px;
+  }
+
+  .more-option {
+    font-size: x-large;
+    margin-left: 6.5rem;
+  }
+
+  .view-more {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 601px) {
+  .threads-row {
+    position: relative;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 30rem 30rem;
+    grid-gap: 3rem;
+    top: 13rem;
+  }
+
+  .thread-card {
+    padding: 10px 20px;
+    width: 30rem;
+    height: 130px;
+    border-radius: 15px;
+  }
+
+  .viewThread-button {
+    text-align: center;
+    color: #f03167;
+    background-color: #fdd9e5;
+    padding: 10px 6rem;
+    border-radius: 10px;
+  }
+
+  .more-option {
+    font-size: x-large;
+    margin-left: 3.7rem;
+  }
+
+  .view-more {
+    padding: 20px;
+  }
+}

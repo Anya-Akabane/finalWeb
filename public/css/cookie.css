@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    min-height: 100vh;
+
+}
+
+.wrapper{
+    position: fixed;
+    bottom: 50px;
+    right: -370px;
+    max-width: 345px;
+    width: 100%;
+    background: #fcf8f9;
+    border-radius: 8px;
+    padding: 15px 25px 22px;
+    transition: right 0.3s ease;
+}
+
+.wrapper.show{
+    right: 20px;
+}
+
+.wrapper header{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+header i{
+    color: #fe036a;
+    font-size: 32px;
+}
+
+header h2{
+    color: #fe036a;
+    font-weight: 500;
+}
+
+.wrapper .data{
+    margin-top: 16px;
+}
+
+.warpper .data p{
+    color: #333;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.data p a{
+    color: #f99dbc;
+    text-decoration: none; 
+}
+
+.data p a:hover{
+    text-decoration: underline;
+}
+
+.warpper .buttons{
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons .button{
+    color: #fff;
+    border: none;
+    padding: 8px 0;
+    border-radius: 4px;
+    background: #f5347f;
+    cursor: pointer;
+    width: calc(100% / 2 - 10px);
+    transition: all 0.2s ease;
+}
+
+.buttons .button:hover{
+    background: #315bd6;
+}
+
+
+

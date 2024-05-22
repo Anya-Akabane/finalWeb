@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: var(--body-color);
+  transition: var(--tran-05);
+}
+
+body.dark {
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #ddd;
+  --text-color: #ddd;
+}
+
+.edit-profile {
+  background-color: white;
+  width: 90%;
+  height: fit-content;
+  position: relative;
+  left: 5%;
+  top: 15%;
+  padding-bottom: 20px;
+  border-radius: 30px;
+}
+
+body.dark .edit-profile {
+  background-color: #242526;
+}
+
+.edit-profile .text {
+  display: relative;
+  font-size: 25px;
+  font-weight: 300;
+  top: 0;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.profile-name p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fe036a;
+  letter-spacing: 2px;
+  font-family: "Cherry Bomb One", cursive;
+}
+
+.btn-change {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+body.dark .btn-change {
+  color: var(--text-color);
+}
+
+.btn-change:hover {
+  color: #7803fe;
+}
+
+body.dark .btn-change:hover {
+  color: #faa3c4;
+}
+
+.profile .profile-img img {
+  margin-right: 20px; /* Adds some space between the image and the text */
+}
+
+.form-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: -50rem;
+}
+
+
+.profile .profile-img img {
+  width: 80px;
+}
+
+label {
+  width: 120px;
+  padding: 10px;
+  display: flex;
+}
+
+body.dark label {
+  color: var(--text-color);
+}
+
+.form-group input,
+textarea,
+select {
+  width: 100%;
+  width: 400px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btn-submits {
+  margin-top: 15px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: #fc72a6;
+  border-radius: 3rem;
+  font-family: "Cherry Bomb One", cursive;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: white;
+  cursor: pointer;
+}
+
+label + input{
+  background-color: rgb(255, 238, 252);
+}
+
+
+body.dark label + input,
+body.dark label + textarea,
+body.dark label + select {
+  
+  background-color: rgb(217, 216, 242);
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar.close ~ .home {
+    left: 0;
+    width: 100%;
+  }
+
+  .profile-name p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fe036a;
+    letter-spacing: 2px;
+    font-family: "Cherry Bomb One", cursive;
+  }
+
+  .home {
+    width: 100%;
+  }
+
+  .form-group input,
+  textarea,
+  select {
+    width: 100%;
+
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .profile .profile-img img {
+    width: 60px;
+  }
+
+  .btn-change {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
+
+  .btn-submits {
+    margin-bottom: 40%;
+    
+  }
+}
+
+
+@media only screen and (max-width: 932px) and (orientation: landscape) {
+  
+.edit-profile {
+  top: 22%;
+  height: fit-content;
+ 
+}
+
+.form-profile {
+  padding-bottom: 20px;
+}
+
+}
+
+
+.success {
+  border-color: green;
+  margin-top: 1rem;
+}
+
+.error {
+  border-color: red;
+  margin-top: 1rem;
+}

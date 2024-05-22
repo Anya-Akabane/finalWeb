@@ -1,0 +1,143 @@
+.post-list {
+  position: relative;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 40rem;
+  gap: 2rem;
+  top: 13rem;
+}
+
+.new-post-card {
+  width: 40rem;
+  height: 100px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 30px;
+
+  display: grid;
+  grid-template-columns: 70px auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.newPost input {
+  height: 50px;
+  width: 30rem;
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #efefef;
+}
+
+.userProfilePic {
+  height: 80px;
+  align-items: center;
+  display: flex;
+}
+
+.userProfilePic img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
+
+.post-card {
+  width: 40rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding: 0px 20px;
+}
+
+.user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.user-img {
+  grid-area: img;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.name-time p {
+  margin: 0;
+}
+
+.time {
+  font-size: small;
+  color: gray;
+}
+
+.description {
+  padding: 0px 20px 10px 20px;
+}
+
+.post-image img {
+  width: 37rem;
+  object-fit: contain;
+  border-radius: 2px;
+  justify-content: center;
+}
+
+.interact {
+  font-size: larger;
+  justify-content: space-around;
+  display: flex;
+}
+
+/* Mobile Display */
+@media screen and (max-width: 600px) {
+  .post-list {
+  position: relative;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 25rem;
+  gap: 2rem;
+  top: 13rem;
+  }
+  
+  .new-post-card {
+  width: 25rem;
+  height: 100px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 10px 30px;
+  
+  display: grid;
+  grid-template-columns: 70px auto;
+  gap: 1rem;
+  align-items: center;
+  }
+  
+  .newPost input {
+  height: 50px;
+  width: 15rem;
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #EFEFEF;
+  }
+  
+  .post-card {
+  width: 25rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .userProfilePic img{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  }
+  
+}

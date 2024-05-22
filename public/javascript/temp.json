@@ -1,0 +1,87 @@
+{
+    "user": [
+        {
+            "username": "Kanna Kamui",
+            "uid": 123,
+            "email": "abc@abc.com",
+            "password": "abc123",
+            "post": [
+                "p1",
+                "p2",
+                "p3"
+            ]
+        }
+    ],
+
+    "post": [
+        {
+            "user": "Kanna Kamui",
+            "postID": "p1",
+            "image": "../public/images/butter mochi.webp",
+            "name": "Butter Mochi",
+            "date": "10 May 2024",
+            "rating": 5,
+            "comments": [
+                "a",
+                "b",
+                "c"
+            ]
+        },
+
+        {
+            "user": "Kanna Kamui",
+            "postID": "p2",
+            "image": "../public/images/butter mochi.webp",
+            "name": "Butter Mochi",
+            "date": "10 May 2024",
+            "rating": 3,
+            "comments": [
+                "a",
+                "b",
+                "c"
+            ]
+        },
+
+        {
+            "user": "Kanna Kamui",
+            "postID": "p3",
+            "image": "../public/images/butter mochi.webp",
+            "name": "Butter Mochi",
+            "date": "10 May 2024",
+            "rating": 4,
+            "comments": [
+                "a",
+                "b",
+                "c"
+            ]
+        },
+
+        {
+            "user": "Kanna Kamui",
+            "postID": "p4",
+            "image": "../public/images/butter mochi.webp",
+            "name": "Butter Mochi",
+            "date": "10 May 2024",
+            "rating": 5,
+            "comments": [
+                "a",
+                "b",
+                "c"
+            ]
+        },
+
+        {
+            "user": "Kanna Kamui",
+            "postID": "p5",
+            "image": "../public/images/butter mochi.webp",
+            "name": "Butter Mochi",
+            "date": "10 May 2024",
+            "rating": 5,
+            "comments": [
+                "a",
+                "b",
+                "c"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  background-image: linear-gradient(
+    #fdfdfd,
+    #ffedff,
+    #ffdaf2,
+    #f4d6ff,
+    #fed9ff,
+    #f7d7ff,
+    #a7b5ff
+  );
+}
+
+nav {
+  padding: 20px 50px;
+  position: fixed;
+  top: 0rem;
+  width: 100%;
+}
+
+/* logo */
+.navbar-logo {
+  font-size: 2rem;
+  font-family: "Cherry Bomb One", sans-serif !important;
+  color: #f03167 !important;
+  padding: 3rem;
+}
+
+.navbar-logo span {
+  padding: 0.3rem;
+  position: relative;
+  top: 0.5rem;
+}
+
+nav a:hover {
+  color: #ff779e !important;
+}
+
+nav a:focus {
+  color: #f5347f !important;
+}
+
+/* theme */
+/* The switch - the box around the slider */
+.switch {
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: absolute;
+  top: 50%;
+  right: 15rem;
+  transform: translateY(-50%);
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* sign in button */
+nav button {
+  font-family: "Cherry Bomb One", sans-serif !important;
+  padding: 10px 20px;
+  margin-right: 50px;
+  border: 2px solid #feacc3;
+  border-radius: 20px;
+  color: #f03167;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #feacc3;
+  color: #fff;
+}
+
+nav button:focus {
+  background-color: #f03167;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .text {
+  top: 15rem;
+}
+
+.login-form {
+  position: absolute;
+  width: 30rem;
+  max-width: 90%;
+  gap: 20px;
+  padding: 50px;
+  top: 18rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1);
+}
+.loginBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  background-color: #d97e98;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.form {
+  position: relative;
+  width: 450px;
+  width: 100%;
+  gap: 20px;
+  padding: 50px;
+  border-radius: 1rem;
+}
+
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid rgb(183, 183, 183);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: black;
+  outline: none;
+  padding: 15px;
+  transition: all 160ms ease-in;
+  background-color: rgb(255, 255, 255);
+}
+
+.fa-solid {
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  color: rgb(183, 183, 183);
+  cursor: pointer;
+}
+
+.form__label {
+  position: absolute;
+  border-radius: 10px;
+  top: 0.8rem;
+  left: 1rem;
+  padding: 5px;
+  color: rgb(183, 183, 183);
+  /* background-color: rgb(255, 255, 255); */
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -1.6rem;
+  font-size: 1rem;
+  left: 0.8rem;
+  color: #000000;
+}
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+}
+
+.text p:first-child {
+  font-family: "Cherry Bomb One", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.text p:nth-child(2) {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.radioBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -1rem;
+  padding-bottom: 1rem;
+}
+
+form button {
+  padding: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+  border: none;
+  border-radius: 3rem;
+  background: linear-gradient(40deg, #ff0080, #ff00d4 70%);
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 200ms ease-in;
+  font-family: "Cherry Bomb One", sans-serif;
+}
+
+.sign-in {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: normal;
+  cursor: pointer;
+  text-decoration: none;
+  color: #5f5f5f;
+  font-size: 12px;
+  position: relative;
+  top: -1rem;
+}
+
+.sign-in span {
+  margin-left: 5px;
+  color: #ef3167;
+  text-decoration: none;
+}
+
+.sign-in p {
+  margin: 0;
+}
+
+.sign-in:hover {
+  text-decoration: underline;
+  color: #000000;
+  font-weight: bold;
+}
+
+.signUpWith p {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: normal;
+  font-weight: light;
+  font-style: italic;
+  line-height: 0.1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.signUpWith p::before,
+.signUpWith p::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #8a8a8a;
+  margin: auto;
+}
+
+.signUpWith p::before {
+  margin-right: 2rem;
+}
+
+.signUpWith p::after {
+  margin-left: 2rem;
+}
+
+.social-media a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  /* border: 3px solid #fdc6d6; */
+  border-radius: 3rem;
+  text-decoration: none;
+  color: #525252;
+  background-color: #ffffff;
+}
+
+.social-media a:hover {
+  background: linear-gradient(to bottom, #fcc6d6, #feacc3, #ff779f 50%);
+  font-weight: bold;
+  border: none;
+  color: #ffffff;
+}
+
+.social-media a:focus {
+  background: linear-gradient(to bottom, #ff779f, #feacc3, #fcc6d6 70%);
+  font-weight: bold;
+  color: #000000;
+  outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /* navbar  mobile*/
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-logo {
+    padding: 0;
+    margin-left: 10px;
+  }
+
+  .navbar-logo span {
+    position: relative;
+    top: 0.5rem;
+    font-size: smaller;
+  }
+
+  nav button {
+    margin-right: 10px;
+    font-size: smaller;
+  }
+
+  .switch {
+    display: none;
+  }
+
+  .container img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .text {
+    transform: translate(-50%, -100%);
+  }
+
+  .text p:first-child {
+    font-size: 2rem;
+  }
+
+  .text p:nth-child(2) {
+    font-size: 0.8rem;
+  }
+
+  .login-form {
+    top: 13rem;
+  }
+
+  .radioBtn {
+    font-size: 0.8rem;
+  }
+
+  form button {
+    font-size: 1rem;
+  }
+
+  .social-media a {
+    font-size: smaller;
+    /* border: 3px solid #fdc6d6; */
+    border-radius: 1rem;
+  }
+
+  .social-media img {
+    width: 30px;
+    height: 30px;
+  }
+}

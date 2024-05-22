@@ -1,0 +1,17 @@
+.card {
+    background-color: white;
+    color: black;
+    border: 1px solid lightgray;
+}
+
+.card-title {
+    font-size: larger;
+}
+
+
+.card-dark {
+    background-color: var(--sidebar-color);
+    /* background-color: #15253F; */
+    color: lightgray;
+    border: 1px solid var(--sidebar-color);;
+}

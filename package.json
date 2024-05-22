@@ -1,0 +1,26 @@
+{
+  "name": "group-project-cosc3060-2024a-33333",
+  "version": "1.0.0",
+  "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/ohvnreiu)\r # Fullstack-Node-Web-Project-COSC3060\r This is a template for a fullstack Node Web Project for COSC3060!",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "i": "^0.3.7",
+    "mongoose": "^8.4.0",
+    "nodemon": "^3.1.0",
+    "npm": "^10.8.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^8.0.0"
+  }
+}

@@ -3,7 +3,7 @@ const express = require("express"),
   mongoose = require("mongoose"),
   passport = require("passport"),
   bodyParser = require("body-parser"),
-  LocalStrategy = require("passport-local"),
+  LocalStrategy = require("passport-local").Strategy,
   passportLocalMongoose = require("passport-local-mongoose");
 const User = require("./model/User");
 const bcrypt = require("bcrypt");
@@ -12,8 +12,9 @@ let app = express();
 
 mongoose.connect("mongodb+srv://trieuduong:mithapnang12@colonthree.4y5dmo3.mongodb.net/?retryWrites=true&w=majority&appName=colonthree");
 
+app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
-app.set('trust proxy', 1)
+app.set('trust proxy', 1);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
     secret: "real secret",
@@ -26,11 +27,51 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static(__dirname + '/public'));
 
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser())
-passport.deserializeUser(User.deserializeUser())
+passport.use(
+  new LocalStrategy({ 
+      usernameField: 'email', 
+      passwordField: 'password'
+    },
+    
+    async (email, password, done) => { 
+      try { 
+          // Find the user by email in the database 
+          const user = await User.findOne({ email }); 
+          // If the user does not exist, return an error 
+          if (!user) { 
+              return done(null, false, { error: "Incorrect email" }); 
+          } 
+
+          // Compare the provided password with the  
+          // hashed password in the database 
+          const passwordsMatch = await bcrypt.compare( 
+              password, 
+              user.password 
+          ); 
+
+          // If the passwords match, return the user object 
+          if (passwordsMatch) { 
+              return done(null, user, { message: "Logged In Successfully" }); 
+          } else { 
+              // If the passwords don't match, return an error 
+              return done(null, false, { error: "Incorrect password" }); 
+          } 
+      } catch (err) { 
+          return done(err); 
+      } 
+  }) 
+); 
+passport.serializeUser((user, done) => done(null, user.id)); 
+passport.deserializeUser((id, done) => { 
+  User.findById(id)
+  .then(user => {
+   done(null, user);
+  })
+  .catch(err => {
+    done(err, null);
+  });
+}); 
 
 //=====================
 // ROUTES
@@ -42,7 +83,7 @@ app.get("/", function (req, res) {
 });
 
 // Showing secret page
-app.get("/thread", function (req, res) {
+app.get("/thread", isLoggedIn, function (req, res) {
   res.render("thread");
 });
 
@@ -53,7 +94,7 @@ app.get("/register", function (req, res) {
 
 // Handling user signup
 app.post("/register", async (req, res) => {
-  const user = await user.create({
+  const user = await User.create({
     username: req.body.username,
     email: req.body.email,
     password: await bcrypt.hash(req.body.password, 10)
@@ -65,48 +106,48 @@ app.post("/register", async (req, res) => {
 
 //Showing login form
 app.get("/login", function (req, res) {
-  res.render("login");
-});
+  if (req.session.email) { 
+    res.redirect("/thread"); 
+  } 
+  return res.render("login", { error: null }); 
+}); 
 
 //Handling user login
-app.post("/login", async function (req, res) {
-  try {
-    // check if the user exists
-    const user = await User.findOne({ email: req.body.email });
-    if (user) {
-      //check if password matches
-      const result = await bcrypt.compare(req.body.password, user.password);
-      if (result) {
-        res.redirect("/thread");
-        console.log(req.user)
-      } else {
-        res.status(400).json({ error: "password doesn't match" });
-      }
-    } else {
-      res.status(400).json({ error: "User doesn't exist" });
-    }
-  } catch (error) {
-    res.status(400).json({ error });
-  }
-});
+app.post("/login", function (req,res,next) {
+  console.log('real')
+  passport.authenticate("local", async (err, user, info) =>{
+    console.log(req.body)
+    console.log("err:", err);
+    console.log("user:", user);
+    console.log("info:", info);
+
+    req.login(user, async (error) => {
+      return res.redirect("/thread");
+    })
+
+
+  })(req,res,next)
+}
+
+); 
 
 // Showing account
-app.get("/account", function (req, res) {
+app.get("/account", isLoggedIn, function (req, res) {
   res.render("account");
 });
 
 // Showing changepass
-app.get("/changepass", function (req, res) {
+app.get("/changepass", isLoggedIn, function (req, res) {
   res.render("changePass");
 });
 
 // Showing security
-app.get("/security", function (req, res) {
+app.get("/security", isLoggedIn, function (req, res) {
   res.render("security");
 });
 
 // Showing settings
-app.get("/settings", function (req, res) {
+app.get("/settings", isLoggedIn, function (req, res) {
   res.render("settings");
 });
 
@@ -116,7 +157,7 @@ app.get("/support", function (req, res) {
 });
 
 //Handling user logout
-app.get("/logout", function (req, res) {
+app.get("/logout", isLoggedIn, function (req, res) {
   req.logout(function (err) {
     if (err) {
       return next(err);
@@ -126,45 +167,45 @@ app.get("/logout", function (req, res) {
 });
 
 //Show admin lock
-app.get("/adminlock", function (req, res) {
+app.get("/adminlock", isLoggedIn, function (req, res) {
   res.render("adminLock");
 });
 
 // Show admin post
-app.get("/adminPost", function (req, res) {
+app.get("/adminPost", isLoggedIn, function (req, res) {
   res.render("adminPost");
 });
 
 // Show admin communities
-app.get("/adminThread", function (req, res) {
+app.get("/adminThread", isLoggedIn, function (req, res) {
   res.render("adminThread");
 });
 
 // user view thread
 
-app.get("/allthreads", (req, res) => {
+app.get("/allthreads", isLoggedIn, (req, res) => {
   res.render("allThreads");
 });
 
 // user rating recipes
 
-app.get("/recipes", (req, res) => {
+app.get("/recipes", isLoggedIn, (req, res) => {
   res.render("recipePage");
 });
 
 // user create post
 
-app.get("/createpost", (req, res) => {
+app.get("/createpost", isLoggedIn, (req, res) => {
   res.render("createPost");
 });
 
 // user profile
-app.get("/profile", (req, res) => {
+app.get("/profile", isLoggedIn, (req, res) => {
   res.render("profile");
 });
 
 // user search 
-app.get("/search", (req, res) => {
+app.get("/search", isLoggedIn, (req, res) => {
   res.render("searchPage");
 });
 
@@ -177,5 +218,5 @@ function isLoggedIn(req, res, next) {
 
 let port = process.env.PORT || 3000;
 app.listen(port, function () {
-  console.log("Server Has Started!");
+  console.log("Server Has Started on port 3000!");
 });

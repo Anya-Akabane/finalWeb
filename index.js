@@ -100,8 +100,10 @@ app.post("/register", async (req, res) => {
     password: await bcrypt.hash(req.body.password, 10)
   });
   console.log("logged");
-  res.redirect("/login");
-  return res.status(200)
+  setTimeout(() => {
+    res.redirect("/login");
+    return res.status(200)
+  }, 1000);
 });
 
 //Showing login form
@@ -139,6 +141,38 @@ app.get("/account", isLoggedIn, function (req, res) {
 // Showing changepass
 app.get("/changepass", isLoggedIn, function (req, res) {
   res.render("changePass");
+});
+
+// Password change
+app.post("/changepass", isLoggedIn, async function (req, res) {
+  console.log("ran changepass")
+  const user = req.user;
+  if (!user) {
+      throw new Error("User does not exist");
+  }
+  if(bcrypt.compare(req.body.password, user.password)) {
+    if(req.body.newPassword === req.body.verifyPassword) {
+      await User.updateOne(
+        { _id: user.id },
+        { $set: { password: await bcrypt.hash(req.body.newPassword, 10) } },
+        { new: true }
+      );
+      console.log("Password change successful")
+      setTimeout(() => {
+        res.redirect("/thread");
+      }, 2000);
+    } else {
+      console.log("Confirm password does not match new password")
+      setTimeout(() => {
+        res.redirect("/thread");
+      }, 2000);
+    }
+  } else {
+    console.log("Password is incorrect")
+    setTimeout(() => {
+      res.redirect("/thread");
+    }, 2000);
+  }
 });
 
 // Showing security

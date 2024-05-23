@@ -29,7 +29,10 @@ var User = new Schema({
     },
     birthdate: { 
         type: Date
-    }
+    },
+    image: {
+        type: String
+    },
 })
  
 User.plugin(passportLocalMongoose);

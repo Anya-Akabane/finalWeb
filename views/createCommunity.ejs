@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/public/css/sidebar.css">
+    <link rel="stylesheet" href="/public/css/createcommunity.css">
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="/images/logo-cookchat.png"
+      type="image/x-icon"
+    />
+
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <!-- sidebar -->
+    <nav class="sidebar close">
+        <header>
+          <div class="image-text">
+            <span class="image">
+              <a href="">
+                <img src="/public/images/logo-cookchat.png" alt="logo" />
+              </a>
+            </span>
+  
+            <div class="text header-text">
+              <a href="#">
+                <span class="name">COOKCHAT</span>
+              </a>
+              
+            </div>
+          </div>
+  
+          <i class="bx bx-chevron-right toggle"></i>
+        </header>
+  
+        <div class="menu-bar">
+          <div class="menu">
+            <li class="search-box">
+              <i class="bx bx-search icon"></i>
+              <input type="text" placeholder="Search..." />
+            </li>
+  
+            <ul class="menu-links">
+              <li class="nav-link">
+                <a href="#">
+                  <i class="bx bx-home-alt icon"></i>
+                  <span class="text nav-text">Home</span>
+                </a>
+              </li>
+              <li class="nav-link">
+                <a href="#">
+                  <i class="bx bx-bowl-hot icon"></i>
+                  <span class="text nav-text">Recipes</span>
+                </a>
+              </li>
+  
+              <li class="nav-link">
+                <a href="#">
+                  <i class="bx bx-bookmark icon"></i>
+                  <span class="text nav-text">Save</span>
+                </a>
+              </li>
+  
+              <li class="nav-link">
+                <a href="#">
+                  <i class="bx bxs-plus-square icon"></i>
+                  <span class="text nav-text">Create Post</span>
+                </a>
+              </li>
+  
+              <li class="nav-link">
+                <a href="#" class="dropdown-toggle">
+                  <i class="bx bx-group icon"></i>
+                  <span class="text nav-text">Communities</span>
+                </a>
+              </li>
+  
+              <li class="nav-link">
+                <a href="/views/profile.html" class="dropdown-toggle">
+                  <i class="icon"
+                    ><img src="/public/images/profile.png" width="30px"
+                  /></i>
+                  <span class="text nav-text">Kanna Kamui</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="bottom-content">
+            <li class="">
+              <a href="#">
+                <i class="bx bx-log-out icon"></i>
+                <span class="text nav-text">Log out</span>
+              </a>
+            </li>
+  
+            <li class="mode">
+              <div class="moon-sun">
+                <i class="bx bx-moon icon moon"></i>
+                <i class="bx bx-sun icon sun"></i>
+              </div>
+  
+              <span class="mode-text text">Dark Mode</span>
+  
+              <div class="toggle-switch">
+                <span class="switch"></span>
+              </div>
+            </li>
+          </div>
+        </div>
+      </nav>
+  
+      <!-- nav bottom -->
+  
+      <header class="header" id="header">
+        <nav class="nav container">
+          <a href="#" class="nav__logo">COOKCHAT</a>
+  
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#home" class="nav__link active-link">
+                  <i class="bx bx-home-alt nav__icon"></i>
+                  <span class="nav__name">Home</span>
+                </a>
+              </li>
+  
+              <li class="nav__item">
+                <a href="#search" class="nav__link">
+                  <i class="bx bx-search nav__icon"></i>
+                  <span class="nav__name">Search</span>
+                </a>
+              </li>
+  
+              <li class="nav__item">
+                <a href="#create" class="nav__link">
+                  <i class="bx bx-plus-circle nav__icon"></i>
+                  <span class="nav__name">Create</span>
+                </a>
+              </li>
+  
+              <li class="nav__item">
+                <a href="#recipes" class="nav__link">
+                  <i class="bx bx-bowl-hot nav__icon"></i>
+                  <span class="nav__name">Recipes</span>
+                </a>
+              </li>
+  
+              <li class="nav__item">
+                <a href="#profile" class="nav__link">
+                  <img
+                    src="/public/images/profile.png"
+                    width="25px"
+                    class="nav__icon"
+                  />
+                  <span class="nav__name">Profile</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- <img src="/public/images/user-img.jpg" class="nav__img" width="40px"> -->
+        </nav>
+      </header>
+  
+      <div class="hero">
+        <nav>
+          <ul class="notification-drop">
+            <li class="item">
+              <i class="bx bxs-bell notification-bell" aria-hidden="true"></i>
+              <span class="btn__badge pulse-button">4</span>
+  
+              <ul>
+                <li>First Item</li>
+                <li>Second Item</li>
+                <li>Third Item</li>
+              </ul>
+            </li>
+          </ul>
+  
+          <img
+            src="/public/images/user-img.jpg"
+            width="40px"
+            alt="profile"
+            class="user-pic"
+            onclick="toggleMenus()"
+          />
+  
+          <div class="sub-menus-wrap" id="subMenus">
+            <div class="sub-menus">
+              <div class="user-info">
+                <a href="" class="sub-menus-link">
+                  <img
+                    src="/public/images/profile.png"
+                    alt="profile"
+                    class="profile-pic"
+                  />
+                  <h3>Kanna Kamui</h3>
+                </a>
+              </div>
+              <hr />
+  
+              <a href="#" class="sub-menus-link">
+                <i class="bx bx-cog"></i>
+                <p>Settings</p>
+              </a>
+  
+              <a href="#" class="sub-menus-link">
+                <i class="bx bxs-dashboard"></i>
+                <p>Admin</p>
+              </a>
+  
+              <a href="#" class="sub-menus-link" id="darkModeToggle">
+                <i class="bx bx-moon
+                "></i>
+                <p>Switch Theme</p>
+              </a>
+  
+              <a href="#" class="sub-menus-link">
+                <i class="bx bx-help-circle"></i>
+                <p>Help & Support</p>
+              </a>
+  
+              <a href="#" class="sub-menus-link">
+                <i class="bx bx-log-out"></i>
+                <p>Log Out</p>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+    <section class="home">
+      <div class="create-a-community">
+        <h1>Create a Community</h1>
+        <form action="/submit" method="post" id="my-form" enctype="multipart/form-data">
+            
+            <label for="title">Title</label>
+            <input type="text" name="title" placeholder="Title" id="title" aria-required="true"/>
+            
+            <label for="photos">Upload photos</label>
+            <div id="drop-zone" role="button" tabindex="0">
+            Drop your files here
+            </div>
+            <input style="display:none;" type="file" id="photos" name="photos" accept="image/*" onchange="previewImages()"/>          
+            <div id="imagePreview"></div>
+    
+            <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="/public/javascript/sidebar.js"></script>
+    <script src="/public/javascript/createcommunity.js"></script>
+    <script src="/index.js"></script>
+  </body>
+</html>

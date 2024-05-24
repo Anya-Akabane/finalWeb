@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema
 const passportLocalMongoose = require('passport-local-mongoose');
+const Community = require("./Community");
 
 var post = new Schema({
     title: {
@@ -32,6 +33,10 @@ var post = new Schema({
         default: Date.now
     },
     likes: [like],
+    community: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Community"
+    }
 });
 
 post.plugin(passportLocalMongoose);

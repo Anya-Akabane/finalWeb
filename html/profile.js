@@ -107,6 +107,23 @@ document.getElementById("defaultOpen").click();
 
 
 // list view and grid view
+function openSlide(evt, slideName) {
+  var i, slidecontent, slidelinks;
+  slidecontent = document.getElementsByClassName("profile__section__slide");
+  for (i = 0; i < slidecontent.length; i++) {
+    slidecontent[i].style.display = "none";
+  }
+  slidelinks = document.getElementsByClassName("slidelinks");
+  for (i = 0; i < slidelinks.length; i++) {
+    slidelinks[i].className = slidelinks[i].className.replace("activ-navbar", "");
+  }
+  document.getElementById(slideName).style.display = "block";
+  evt.currentTarget.className += " activ-navbar";
+}
+
+document.getElementById("defaultSlide").click();
+
+// Get the element with id="defaultOpen" and click on it
 
 
 

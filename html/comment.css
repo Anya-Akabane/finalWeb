@@ -44,10 +44,11 @@ button:hover{
 }
 .comment-section{
     padding: 0 1rem;
+    
 }
 .container7{
     position: relative;
-    top: 8rem;
+    top: 15rem;
     border-radius: 8px;
     padding: 1.5rem;
     background-color: var(--White);
@@ -60,6 +61,8 @@ button:hover{
     max-width: 75ch;
     margin: auto;
     margin-top: 1rem;
+    
+    
 }
 .comment{
     margin-bottom: 1rem;
@@ -162,6 +165,7 @@ button:hover{
     justify-items: center;
     gap: 1rem;
     min-height: 9rem;
+    
 }
 .reply-input img{
     grid-area: avatar;

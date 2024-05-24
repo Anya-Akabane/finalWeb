@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- css -->
-    <link rel="stylesheet" href="/css/sidebar.css"/>
-    <link rel="stylesheet" href="/css/createpost.css"/>
+    <link rel="stylesheet" href="/public/css/sidebar.css"/>
+    <link rel="stylesheet" href="/public/css/createpost.css"/>
 
 
     <!-- Boxicons CSS -->
@@ -16,162 +16,163 @@
     />
 
     <!-- Quill -->
-    <link id="quill-theme-stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+  
 
 
-    <title>Create Post</title>
+    <title>Document</title>
   </head>
   <body>
     <!-- sidebar -->
-     <nav class="sidebar close">
-            <header>
-                <div class="image-text">
-                    <span class="image">
-                        <img
-                            src="/images/logo-cookchat.png"
-                            alt="logo"
-                        />
-                    </span>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <a href="">
+              <img src="/public/images/logo-cookchat.png" alt="logo" />
+            </a>
+          </span>
 
-                    <div class="text header-text">
-                        <span class="name">COOKCHAT</span>
-                    </div>
-                </div>
+          <div class="text header-text">
+            <a href="#">
+              <span class="name">COOKCHAT</span>
+            </a>
+            
+          </div>
+        </div>
 
-                <i class="bx bx-chevron-right toggle"></i>
-            </header>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
 
-            <div class="menu-bar">
-                <div class="menu">
-                    <li class="search-box">
-                        <i class="bx bx-search icon"></i>
-                        <input type="text" placeholder="Search..." />
-                    </li>
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <i class="bx bx-search icon"></i>
+            <input type="text" placeholder="Search..." />
+          </li>
 
-                    <ul class="menu-links">
-                        <li class="nav-link">
-                            <a href="/thread">
-                                <i class="bx bx-home-alt icon"></i>
-                                <span class="text nav-text">Home</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="/recipes">
-                                <i class="bx bx-bowl-hot icon"></i>
-                                <span class="text nav-text">Recipes</span>
-                            </a>
-                        </li>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-bowl-hot icon"></i>
+                <span class="text nav-text">Recipes</span>
+              </a>
+            </li>
 
-                        <li class="nav-link">
-                            <a href="/profile">
-                                <i class="bx bx-bookmark icon"></i>
-                                <span class="text nav-text">Save</span>
-                            </a>
-                        </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-bookmark icon"></i>
+                <span class="text nav-text">Save</span>
+              </a>
+            </li>
 
-                        <li class="nav-link">
-                            <a href="/createpost">
-                                <i class="bx bxs-plus-square icon"></i>
-                                <span class="text nav-text">Create Post</span>
-                            </a>
-                        </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bxs-plus-square icon"></i>
+                <span class="text nav-text">Create Post</span>
+              </a>
+            </li>
 
-                        <li class="nav-link">
-                            <a href="/allthreads" class="dropdown-toggle">
-                                <i class="bx bx-group icon"></i>
-                                <span class="text nav-text">Communities</span>
-                            </a>
-                        </li>
+            <li class="nav-link">
+              <a href="#" class="dropdown-toggle">
+                <i class="bx bx-group icon"></i>
+                <span class="text nav-text">Communities</span>
+              </a>
+            </li>
 
-                        <li class="nav-link">
-                            <a href="/profile" class="dropdown-toggle">
-                                <i class="icon"
-                                    ><img
-                                        src="/images/profile.png"
-                                        width="30px"
-                                /></i>
-                                <span class="text nav-text">Kanna Kamui</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bottom-content">
-                    <li class="">
-                        <a href="/logout">
-                            <i class="bx bx-log-out icon"></i>
-                            <span class="text nav-text">Log out</span>
-                        </a>
-                    </li>
+            <li class="nav-link">
+              <a href="/views/profile.html" class="dropdown-toggle">
+                <i class="icon"
+                  ><img src="/public/images/profile.png" width="30px"
+                /></i>
+                <span class="text nav-text">Kanna Kamui</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-content">
+          <li class="">
+            <a href="#">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Log out</span>
+            </a>
+          </li>
 
-                    <li class="mode">
-                        <div class="moon-sun">
-                            <i class="bx bx-moon icon moon"></i>
-                            <i class="bx bx-sun icon sun"></i>
-                        </div>
-
-                        <span class="mode-text text">Dark Mode</span>
-
-                        <div class="toggle-switch">
-                            <span class="switch"></span>
-                        </div>
-                    </li>
-                </div>
+          <li class="mode">
+            <div class="moon-sun">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
             </div>
-        </nav>
 
-        <!-- nav bottom -->
+            <span class="mode-text text">Dark Mode</span>
 
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="/thread" class="nav__logo">COOKCHAT</a>
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="/thread" class="nav__link">
-                                <i class="bx bx-home-alt nav__icon"></i>
-                                <span class="nav__name">Home</span>
-                            </a>
-                        </li>
+    <!-- nav bottom -->
 
-                        <li class="nav__item">
-                            <a href="/seacrh" class="nav__link">
-                                <i class="bx bx-search nav__icon"></i>
-                                <span class="nav__name">Search</span>
-                            </a>
-                        </li>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">COOKCHAT</a>
 
-                        <li class="nav__item">
-                            <a href="/createpost" class="nav__link active-link">
-                                <i class="bx bx-plus-circle nav__icon"></i>
-                                <span class="nav__name">Create</span>
-                            </a>
-                        </li>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
 
-                        <li class="nav__item">
-                            <a href="/recipes" class="nav__link">
-                                <i class="bx bx-bowl-hot nav__icon"></i>
-                                <span class="nav__name">Recipes</span>
-                            </a>
-                        </li>
+            <li class="nav__item">
+              <a href="#search" class="nav__link">
+                <i class="bx bx-search nav__icon"></i>
+                <span class="nav__name">Search</span>
+              </a>
+            </li>
 
-                        <li class="nav__item">
-                            <a href="/allthreads" class="nav__link">
-                                <i class="bx bx-group nav__icon"></i>
-                                <span class="nav__name">Communities</span>
-                            </a>
-                        </li>
+            <li class="nav__item">
+              <a href="#create" class="nav__link">
+                <i class="bx bx-plus-circle nav__icon"></i>
+                <span class="nav__name">Create</span>
+              </a>
+            </li>
 
-                        
-                    </ul>
-                </div>
+            <li class="nav__item">
+              <a href="#recipes" class="nav__link">
+                <i class="bx bx-bowl-hot nav__icon"></i>
+                <span class="nav__name">Recipes</span>
+              </a>
+            </li>
 
-                <!-- <img src="/public/images/user-img.jpg" class="nav__img" width="40px"> -->
-            </nav>
-        </header>
+            <li class="nav__item">
+              <a href="#profile" class="nav__link">
+                <img
+                  src="/public/images/profile.png"
+                  width="25px"
+                  class="nav__icon"
+                />
+                <span class="nav__name">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-         <div class="hero">
+        <!-- <img src="/public/images/user-img.jpg" class="nav__img" width="40px"> -->
+      </nav>
+    </header>
+
+    <div class="hero">
       <nav>
         <ul class="notification-drop">
           <li class="item">
@@ -187,7 +188,7 @@
         </ul>
 
         <img
-          src="/images/user-img.jpg"
+          src="/public/images/user-img.jpg"
           width="40px"
           alt="profile"
           class="user-pic"
@@ -197,40 +198,39 @@
         <div class="sub-menus-wrap" id="subMenus">
           <div class="sub-menus">
             <div class="user-info">
-              <a href="/profile" class="sub-menus-link">
+              <a href="" class="sub-menus-link">
                 <img
-                  src="/images/profile.png"
+                  src="/public/images/profile.png"
                   alt="profile"
                   class="profile-pic"
                 />
                 <h3>Kanna Kamui</h3>
               </a>
-              
             </div>
             <hr />
 
-            <a href="/settings" class="sub-menus-link">
+            <a href="#" class="sub-menus-link">
               <i class="bx bx-cog"></i>
               <p>Settings</p>
             </a>
 
-            <a href="/adminLock" class="sub-menus-link">
+            <a href="#" class="sub-menus-link">
               <i class="bx bxs-dashboard"></i>
               <p>Admin</p>
             </a>
 
-
-            <a class="sub-menus-link" id="darkModeToggle">
-              <i class="bx bx-moon"></i>
+            <a href="#" class="sub-menus-link" id="darkModeToggle">
+              <i class="bx bx-moon
+              "></i>
               <p>Switch Theme</p>
             </a>
 
-            <a href="/support" class="sub-menus-link">
+            <a href="#" class="sub-menus-link">
               <i class="bx bx-help-circle"></i>
               <p>Help & Support</p>
             </a>
 
-            <a href="/logout" class="sub-menus-link">
+            <a href="#" class="sub-menus-link">
               <i class="bx bx-log-out"></i>
               <p>Log Out</p>
             </a>
@@ -242,50 +242,29 @@
     <main class="home">
       <div class="create-a-post">
         <h1>Create a post</h1>
-        <form action="/submit" method="post" id="my-form">
-          <label for="threadName">Find a thread</label>
-          <input type="text" name="threadName" placeholder="Thread Name" id="threadName"/>
-          <label for="title">Title</label>
-          <input type="text" name="title" placeholder="Title" id="title"/>
-          <label for="post-content">Content</label>
-          <div id="post-content">
-            <div id="toolbar-container">
-              <span class="ql-formats">
-                <select class="ql-size"></select>
-              </span>
-              <span class="ql-formats">
-                <button class="ql-bold"></button>
-                <button class="ql-italic"></button>
-                <button class="ql-underline"></button>
-                <button class="ql-strike"></button>
-              </span>
-              <span class="ql-formats">
-                <button class="ql-header" value="1"></button>
-                <button class="ql-header" value="2"></button>
-                <button class="ql-header" value="3"></button>
-                <button class="ql-blockquote"></button>
-              </span>
-              <span class="ql-formats">
-                <button class="ql-list" value="ordered"></button>
-                <button class="ql-list" value="bullet"></button>
-              </span>
-              <span class="ql-formats">
-                <button class="ql-link"></button>
-                <button class="ql-image"></button>
-              </span>
-              <span class="ql-formats">
-                <button class="ql-clean"></button>
-              </span>
+        <form action="/submit" method="post" id="my-form" enctype="multipart/form-data">
+            <label for="threadName">Find a thread</label>
+            <input type="text" name="threadName" placeholder="Thread Name" id="threadName" aria-required="true"/>
+            
+            <label for="title">Title</label>
+            <input type="text" name="title" placeholder="Title" id="title" aria-required="true"/>
+            
+            <label for="post-content">Content</label>
+            <textarea id="post-content" name="post-content" rows="4" cols="37" placeholder="Insert your content here" aria-required="true"></textarea>
+            
+            <label for="photos">Upload photos</label>
+            <div id="drop-zone" role="button" tabindex="0">
+            Drop your files here
             </div>
-            <div id="editor"></div>
-          </div>       
-          <button type="submit">Submit</button>
+            <input style="display:none;" type="file" id="photos" name="photos" accept="image/*" multiple onchange="previewImages()"/>          
+            <div id="imagePreview"></div>
+    
+            <button type="submit">Submit</button>
         </form>
-      </div>
+    </div>
     </main>
 
-    <script src="/javascript/sidebar.js"></script>
-    <script src="/javascript/createpost.js"></script>
-
+    <script src="/public/javascript/sidebar.js"></script>
+    <script src="/public/javascript/createpost.js"></script>
   </body>
 </html>

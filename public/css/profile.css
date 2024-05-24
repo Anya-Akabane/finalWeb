@@ -30,145 +30,132 @@ body.dark{
 
 
 
-.filters {
+:root {
+  --primaryColor: #fafafa;
+  --secondaryColor: #efefef;
+  --borderColor: #dbdbdb;
+  --tabTextColor: #8e8e8e;
+}
+
+.container7{
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+ 
+}
+
+
+.profile__profile {
+  position: relative;
+  top: 5rem;
+  margin-bottom: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.profile__profile__logo {
+  flex: 1;
+  text-align: center;
+}
+
+.profile__profile__logo img {
+  width: 100px;
+  border-radius: 100%;
+  border: 2px solid rgb(161, 159, 159);
+}
+
+.profile__profile__details {
+  flex: 2;
+  
+}
+
+.profile__profile__details__userName {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  
+}
+
+.profile__profile__details__userName h4 {
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.profile__profile__details__userName button {
+  background-color: transparent;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.profile__profile__details__userName button:last-child {
+  border: none;
+}
+
+
+
+.profile__section__tab {
+  overflow: hidden;
+  border-top: 1px solid var(--borderColor);
+  display: flex;
+  justify-content: center;
+  margin: 0 0 10px 0;
+  margin-top: 6rem;
+}
+
+.profile__section__tab button {
+  background-color: transparent;
+  border: none;
+  padding: 20px 0px 0px 0px;
+  margin: 0 20px;
+  transition: 0.3s;
+  font-size: 14px;
+  color: var(--tabTextColor);
   display: flex;
   justify-content: center;
   align-items: center;
-flex-wrap: wrap;
-  position: absolute;
-  left: 7rem;
-  box-sizing: border-box;
-
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.filters span {
-  font-weight: bold;
+.profile__section__tab button svg {
   margin-right: 5px;
 }
 
-.filter-options {
+.profile__section__tab__tabcontent {
+  display: none;
+}
+
+.profile__section__tab__tabcontent__container {
+  max-width: 1300px;
+}
+
+.profile__section__tab__tabcontent__container__image {
   display: flex;
-  margin-right: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-.filter-options select {
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 5px;
+.profile__section__tab__tabcontent__container__image img {
+  width: 30%;
+  object-fit: contain;
+  flex: 1;
 }
 
-
-
-.manage-users {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 8rem;
-    top: 10rem;
-    padding: 10px;
-    margin: 20px;
-    width: calc(100% - 250px);
-    background-color: #fff;
-    border-radius: 20px;
+.profile__section__tab__tabcontent__container__image img:nth-child(2) {
+  margin: 7px 14px;
 }
 
-
-@media screen and (max-width: 600px) {
-
-  .last{
-    height : calc(100% + 20rem) !important;
-   
-  }
-
-  
-    .sidebar.close ~ .home {
-        left: 0;
-        width: 100%;
-        
-    }
-
-    .sidebar.close ~ .home .search-box2{
-      width: fit-content;
-      height: fit-content;
-      position: absolute;
-      top: 7rem;
-      left: 2rem;
-      
-    }
-
-
-
-    .manage-users .user{
-      margin-bottom: 2rem;
-      bottom: 5rem;
-    }
-    
-
-    .search-box2{
-      width: fit-content;
-      height: fit-content;
-      position: absolute;
-      top: 7rem;
-      left: 2rem;
-      
-    }
-
-
-
-  .manage-users {
-    width: 100%;
-    left: 0;
-    margin: 0;
-    padding: 10px;
-    
-   
-   
-  }
-
-
-  .user-name  {
-    font-size: 13px;
-  }
-
-  .user-name small{
-    font-size: 10px;
-  }
-
-  .user span{
-    font-size: 10px;
-  }
-
-  .user-infos p{
-    font-size: 12px;
-  }
-
-
-  
-
-.filters {
- 
-  top: 0;
-  left: 6rem;
+.profile__section__tab .active {
+  border-top: 2px solid #000000;
+  color: #5c5c5c;
 }
 
-
-
-.filter-options {
-  display: flex;
-  margin-right: 5px;
-}
-
-.filter-options select {
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-  
-  
-}
 
 
 

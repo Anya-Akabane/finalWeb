@@ -106,7 +106,13 @@ document.getElementById("defaultOpen").click();
 
 
 
-let input_Profile_Name = "Sad Mia";
+// list view and grid view
+
+
+
+// like btn
+
+let input_Profile_Name = "Kanna Kamui";
 
 let lcs_btn_i = document.querySelector(".lcs-btn_i");
 let post_icon_btn_i = document.querySelector("#post-icon-btn_i");
@@ -121,7 +127,16 @@ lcs_btn_i.addEventListener("click", function () {
 
 let activ_navbar = document.querySelector(".activ-navbar");
 
+let lcs_btn_0i = document.querySelector(".lcs-btn_0i");
+let post_icon_btn_0i = document.querySelector("#post-icon-btn_0i");
+let post_icon_text_0i = document.querySelector("#post-icon-text_0i");
 
+lcs_btn_0i.addEventListener("click", function () {
+  post_icon_btn_0i.classList.toggle("fas");
+  post_icon_text_0i.innerHTML = "Like";
+  post_icon_text_0i.classList.toggle("like-controle");
+  post_icon_btn_0i.classList.toggle("like-controle");
+});
 
 
 let lcs_btn_2i = document.querySelector(".lcs-btn_2i");

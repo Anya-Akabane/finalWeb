@@ -1,4 +1,3 @@
-
 const express = require("express"),
   mongoose = require("mongoose"),
   passport = require("passport"),
@@ -23,18 +22,21 @@ const upload = multer({
   }
 })
 
-mongoose.connect("mongodb+srv://trieuduong:mithapnang12@colonthree.4y5dmo3.mongodb.net/?retryWrites=true&w=majority&appName=colonthree");
+mongoose.connect(
+  "mongodb+srv://trieuduong:mithapnang12@colonthree.4y5dmo3.mongodb.net/?retryWrites=true&w=majority&appName=colonthree"
+);
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
-app.set('trust proxy', 1);
+app.set("trust proxy", 1);
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(session({
+app.use(
+  session({
     secret: "real secret",
     resave: false,
     saveUninitialized: false,
     cookie: { secure: false },
-    cookie: { maxAge: 1000 * 60 * 60 * 24 * 28}
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 28 },
   })
 );
 
@@ -42,49 +44,48 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(
-  new LocalStrategy({ 
-      usernameField: 'email', 
-      passwordField: 'password'
+  new LocalStrategy(
+    {
+      usernameField: "email",
+      passwordField: "password",
     },
-    
-    async (email, password, done) => { 
-      try { 
-          // Find the user by email in the database 
-          const user = await User.findOne({ email }); 
-          // If the user does not exist, return an error 
-          if (!user) { 
-              return done(null, false, { error: "Incorrect email" }); 
-          } 
 
-          // Compare the provided password with the  
-          // hashed password in the database 
-          const passwordsMatch = await bcrypt.compare( 
-              password, 
-              user.password 
-          ); 
+    async (email, password, done) => {
+      try {
+        // Find the user by email in the database
+        const user = await User.findOne({ email });
+        // If the user does not exist, return an error
+        if (!user) {
+          return done(null, false, { error: "Incorrect email" });
+        }
 
-          // If the passwords match, return the user object 
-          if (passwordsMatch) { 
-              return done(null, user, { message: "Logged In Successfully" }); 
-          } else { 
-              // If the passwords don't match, return an error 
-              return done(null, false, { error: "Incorrect password" }); 
-          } 
-      } catch (err) { 
-          return done(err); 
-      } 
-  }) 
-); 
-passport.serializeUser((user, done) => done(null, user.id)); 
-passport.deserializeUser((id, done) => { 
+        // Compare the provided password with the
+        // hashed password in the database
+        const passwordsMatch = await bcrypt.compare(password, user.password);
+
+        // If the passwords match, return the user object
+        if (passwordsMatch) {
+          return done(null, user, { message: "Logged In Successfully" });
+        } else {
+          // If the passwords don't match, return an error
+          return done(null, false, { error: "Incorrect password" });
+        }
+      } catch (err) {
+        return done(err);
+      }
+    }
+  )
+);
+passport.serializeUser((user, done) => done(null, user.id));
+passport.deserializeUser((id, done) => {
   User.findById(id)
-  .then(user => {
-   done(null, user);
-  })
-  .catch(err => {
-    done(err, null);
-  });
-}); 
+    .then((user) => {
+      done(null, user);
+    })
+    .catch((err) => {
+      done(err, null);
+    });
+});
 
 //=====================
 // ROUTES
@@ -110,41 +111,37 @@ app.post("/register", async (req, res) => {
   const user = await User.create({
     username: req.body.username,
     email: req.body.email,
-    password: await bcrypt.hash(req.body.password, 10)
+    password: await bcrypt.hash(req.body.password, 10),
   });
   console.log("logged");
   setTimeout(() => {
     res.redirect("/login");
-    return res.status(200)
+    return res.status(200);
   }, 1000);
 });
 
 //Showing login form
 app.get("/login", function (req, res) {
-  if (req.session.email) { 
-    res.redirect("/thread"); 
-  } 
-  return res.render("login", { error: null }); 
-}); 
+  if (req.session.email) {
+    res.redirect("/thread");
+  }
+  return res.render("login", { error: null });
+});
 
 //Handling user login
-app.post("/login", function (req,res,next) {
-  console.log('real')
-  passport.authenticate("local", async (err, user, info) =>{
-    console.log(req.body)
+app.post("/login", function (req, res, next) {
+  console.log("real");
+  passport.authenticate("local", async (err, user, info) => {
+    console.log(req.body);
     console.log("err:", err);
     console.log("user:", user);
     console.log("info:", info);
 
     req.login(user, async (error) => {
       return res.redirect("/thread");
-    })
-
-
-  })(req,res,next)
-}
-
-); 
+    });
+  })(req, res, next);
+});
 
 // Showing account
 app.get("/account", isLoggedIn, function (req, res) {
@@ -158,30 +155,30 @@ app.get("/changepass", isLoggedIn, function (req, res) {
 
 // Password change
 app.post("/changepass", isLoggedIn, async function (req, res) {
-  console.log("ran changepass")
+  console.log("ran changepass");
   const user = req.user;
   if (!user) {
-      throw new Error("User does not exist");
+    throw new Error("User does not exist");
   }
-  if(bcrypt.compare(req.body.password, user.password)) {
-    if(req.body.newPassword === req.body.verifyPassword) {
+  if (bcrypt.compare(req.body.password, user.password)) {
+    if (req.body.newPassword === req.body.verifyPassword) {
       await User.updateOne(
         { _id: user.id },
         { $set: { password: await bcrypt.hash(req.body.newPassword, 10) } },
         { new: true }
       );
-      console.log("Password change successful")
+      console.log("Password change successful");
       setTimeout(() => {
         res.redirect("/thread");
       }, 2000);
     } else {
-      console.log("Confirm password does not match new password")
+      console.log("Confirm password does not match new password");
       setTimeout(() => {
         res.redirect("/thread");
       }, 2000);
     }
   } else {
-    console.log("Password is incorrect")
+    console.log("Password is incorrect");
     setTimeout(() => {
       res.redirect("/thread");
     }, 2000);
@@ -264,12 +261,10 @@ app.get("/profile", isLoggedIn, (req, res) => {
   res.render("profile");
 });
 
-// user search 
+// user search
 app.get("/search", isLoggedIn, (req, res) => {
   res.render("searchPage");
 });
-
-
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();

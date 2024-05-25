@@ -3,10 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="/html/profile.css" />
-    <link rel="stylesheet" type="text/css" href="/html/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/html/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="/images/logo-cookchat.png"
+      type="image/x-icon"
+    />
+  
   </head>
   <body>
     <nav class="sidebar close">
@@ -14,7 +27,7 @@
         <div class="image-text">
           <span class="image">
             <a href="">
-              <img src="/images/logo-cookchat.png" alt="logo" />
+              <img src="/public/images/logo-cookchat.png" alt="logo" />
             </a>
           </span>
 
@@ -73,7 +86,7 @@
             <li class="nav-link">
               <a href="/profile" class="dropdown-toggle">
                 <i class="icon"
-                  ><img src="/images/profile.png" width="30px"
+                  ><img src="/public/images/profile.png" width="30px"
                 /></i>
                 <span class="text nav-text">Kanna Kamui</span>
               </a>
@@ -142,7 +155,7 @@
 
             <li class="nav__item">
               <a href="#profile" class="nav__link">
-                <img src="/images/profile.png" width="25px" class="nav__icon" />
+                <img src="/public/images/profile.png" width="25px" class="nav__icon" />
                 <span class="nav__name">Profile</span>
               </a>
             </li>
@@ -169,7 +182,7 @@
         </ul>
 
         <img
-          src="/images/user-img.jpg"
+          src="/public/images/user-img.jpg"
           width="40px"
           alt="profile"
           class="user-pic"
@@ -181,7 +194,7 @@
             <div class="user-info">
               <a href="" class="sub-menus-link">
                 <img
-                  src="/images/profile.png"
+                  src="/public/images/profile.png"
                   alt="profile"
                   class="profile-pic"
                 />
@@ -222,14 +235,10 @@
     <section class="home">
       <div class="text"></div>
 
-
       <div class="profile__profile">
         <div class="container7">
           <div class="profile__profile__logo">
-            <img
-              src="https://www.pngarts.com/files/5/User-Avatar-PNG-Image.png"
-              alt="Profile Image"
-            />
+            <img src="/public/images/kanna.jpg" alt="Profile Image" />
           </div>
           <div class="profile__profile__details">
             <div class="profile__profile__details__userName">
@@ -271,6 +280,7 @@
               <h6>Walnut</h6>
               <p>17/12/2005</p>
               <p>They/them</p>
+              <p>I'm a walnut</p>
             </div>
           </div>
         </div>
@@ -378,422 +388,542 @@
           </div>
 
           <div id="Posts" class="profile__section__tab__tabcontent">
-                 <section class="post-info">
-        <div class="box-design">
-          <div class="post-upload-T">
-            <div class="profil-ing-div">
-              <a href="#" id="profile-link">
-                <img id="Profile_images" src="images/friends/00.jpg" />
-              </a>
-            </div>
-            <div class="text-post">
-              <span>What's on your mind?</span>
-            </div>
-          </div>
-         
-        </div>
-
-        <div class="box-design post-filter">
-          <div class="filter-site">
-            <span>Posts</span>
-            <div class="fil-ter">
-              <button><i class="fas fa-sliders-h"></i> Filters</button>
-
-              <button><i class="fas fa-cog"></i> Manager Posts</button>
-            </div>
-          </div>
-
-          <div class="list-type">
-            <div class="fil-list activ-navbar">
-              <i class="fas fa-bars"></i> List View
-            </div>
-            <div class="fil-list">
-              <i class="fas fa-th-large"></i> Grid View
-            </div>
-          </div>
-        </div>
-
-        <div class="box-design post-div">
-          <div class="post-information">
-            <div>
-            <div class="profil-ing-div post-profile-img">
-              <a href="#" id="profile-link">
-                <img id="Profile_images" src="images/friends/00.jpg" />
-              </a>
-            </div>
-            </div>
-
-              <div class="post-three-dot">
-            	<h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
-                <p>
-                    <a href="%">5min</a>
-                    
-                </p>
-
-                	<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-
-
+            <section class="post-info">
+              <div class="box-design">
+                <div class="post-upload-T">
+                  <div class="profil-ing-div">
+                    <a href="#" id="profile-link">
+                      <img id="Profile_images" src="/public/images/user-img.jpg" />
+                    </a>
+                  </div>
+                  <div class="text-post">
+                    <span>What's on your mind?</span>
+                  </div>
                 </div>
-          </div>
+              </div>
 
-                <div class="post-text-show">
-                    <p>Cooking tips</p>
-                    <p>cooking is my passion</p>
-			          </div>		
-                            
-                        <img id="post-image-12" class="post-images" src="/public/images/cook.png">
+              <div class="box-design post-filter">
+                <div class="filter-site">
+                  <span>Posts</span>
+                  <div class="fil-ter">
+                    <button><i class="fas fa-sliders-h"></i> Filters</button>
 
-        
-						<div class="actavite">
-							<div class="lcs-btn lcs-btn_i">
-								<p>
-									<i id="post-icon-btn_i" class="far fa-thumbs-up"></i> 
-									<span id="post-icon-text_i">Like</span>
-								</p>
-							</div>
-							<div class="lcs-btn">
-								<p><i class="far fa-comment-alt"></i> Comment</p>
-							</div>
-							<div class="lcs-btn">
-								<p><i class="fas fa-share"></i> Share</p>
-							</div>
-						</div>
-
-                        <div class="comment-site">
-							<div class="profil-ing-div">
-								<a href="#" id="profile-link">
-									<img id="Profile_images" src="images/friends/00.jpg">
-								</a>
-							</div>
-							<div class="comment-input">
-                <a href="/html/comment.html">
-                  	<input type="button" placeholder="Write a comment…">
-                </a>
-								
-							</div>
-						</div>
-        </div>
-
-<!-- no image -->
-         <div class="box-design post-div">
-          <div class="post-information">
-            <div>
-            <div class="profil-ing-div post-profile-img">
-              <a href="#" id="profile-link">
-                <img id="Profile_images" src="images/friends/00.jpg" />
-              </a>
-            </div>
-            </div>
-
-              <div class="post-three-dot">
-            	<h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
-                <p>
-                    <a href="%">5min</a>
-                    
-                </p>
-
-                	<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-
-
+                    <button><i class="fas fa-cog"></i> Manager Posts</button>
+                  </div>
                 </div>
-          </div>
+
+                <div class="list-type">
+
+                  <button class="slidelinks" onclick="openSlide(event, 'list')" id="defaultSlide">
+                    <div class="fil-list">
+                    <i class="fas fa-bars"></i> List View
+                  </div>
+                  </button>
+                  
+                  <button class="slidelinks" onclick="openSlide(event, 'grid')">
+                    <div class="fil-list">
+                    <i class="fas fa-th-large"></i> Grid View
+                    </div>
+                  </button>
+                  
+                </div>
+              </div>
+
+            <div id="list" class="profile__section__slide">
+
+              <div class="box-design post-div">
+                <div class="post-information">
+                  <div>
+                    <div class="profil-ing-div post-profile-img">
+                      <a href="#" id="profile-link">
+                        <img id="Profile_images" src="/public/images/user-img.jpg" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="post-three-dot">
+                    <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
+                    <p>
+                      <a href="%">5min</a>
+                    </p>
+
+                    <span class="thre-dto-btn fas fa-ellipsis-h"></span>
+                  </div>
+                </div>
 
                 <div class="post-text-show">
-                    <p>Cooking tips</p>
-                    <p>cooking is my passion</p>
-			          </div>		
-                            
+                  <p>Cooking tips</p>
+                  <p>cooking is my passion</p>
+                </div>
 
-        
-						<div class="actavite">
-							<div class="lcs-btn lcs-btn_i">
-								<p>
-									<i id="post-icon-btn_i" class="far fa-thumbs-up"></i> 
-									<span id="post-icon-text_i">Like</span>
-								</p>
-							</div>
-							<div class="lcs-btn">
-								<p><i class="far fa-comment-alt"></i> Comment</p>
-							</div>
-							<div class="lcs-btn">
-								<p><i class="fas fa-share"></i> Share</p>
-							</div>
-						</div>
+                <img
+                  id="post-image-12"
+                  class="post-images"
+                  src="/public/images/cook.png"
+                />
 
-                        <div class="comment-site">
-							<div class="profil-ing-div">
-								<a href="#" id="profile-link">
-									<img id="Profile_images" src="images/friends/00.jpg">
-								</a>
-							</div>
-							<div class="comment-input">
-                <a href="/html/comment.html">
-                  	<input type="button" placeholder="Write a comment…">
-                </a>
-								
-							</div>
-						</div>
-        </div>
+                <div class="actavite">
+                  <div class="lcs-btn lcs-btn_i">
+                    <p>
+                      <i id="post-icon-btn_i" class="far fa-thumbs-up"></i>
+                      <span id="post-icon-text_i">Like</span>
+                    </p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="far fa-comment-alt"></i> Comment</p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="fas fa-share"></i> Share</p>
+                  </div>
+                </div>
 
-<!-- 2image -->
-        <div class="box-design post-div">
-						<div class="post-information">
-							<div>
-								<div class="profil-ing-div post-profile-img">
-								<a href="#" id="profile-link">
-									<img id="Profile_images" src="images/friends/00.jpg">
-								</a>
-							</div>
-							</div>
-							<div class="post-three-dot">
-								<h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
-								<p>
-									<a href="%">5d</a>
-								</p>
+                <div class="comment-site">
+                  <div class="profil-ing-div">
+                    <a href="#" id="profile-link">
+                      <img id="Profile_images" src="/public/images/user-img.jpg" />
+                    </a>
+                  </div>
+                  <a href="/html/comment.html">
+                    <div class="comment-input">
+                        Write a comment…
+                    </div>
+                  </a>
+                </div>
+              </div>
 
+              <!-- no image -->
+              <div class="box-design post-div">
+                <div class="post-information">
+                  <div>
+                    <div class="profil-ing-div post-profile-img">
+                      <a href="#" id="profile-link">
+                        <img id="Profile_images" src="/public/images/user-img.jpg" />
+                      </a>
+                    </div>
+                  </div>
 
-								<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-							</div>
+                  <div class="post-three-dot">
+                    <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
+                    <p>
+                      <a href="%">5min</a>
+                    </p>
 
-						</div>
+                    <span class="thre-dto-btn fas fa-ellipsis-h"></span>
+                  </div>
+                </div>
 
-            <div class="post-text-show">
-                    <p>Cooking tips</p>
-                    <p>cooking is my passion</p>
-			          </div>
-
-
-							<!-- <p class="post-hader-text" id="post_h_2I">Hello World.</p> -->
-
-							<div class="post-background-img">
-								<div>
-									<img id="post-image-1" src="/public/images/cook.png">
-								</div>
-								<div>
-									<img id="post-image-2" src="/public/images/cook.png">
-								</div>
-							</div>
-
-              
-
-						<div class="actavite">
-							<div class="lcs-btn lcs-btn_2i">
-								<p>
-									<i id="post-icon-btn_2i" class="far fa-thumbs-up"></i> 
-									<span id="post-icon-text_2i">Like</span>
-								</p>
-							</div>
-							<div class="lcs-btn">
-								<p><i class="far fa-comment-alt"></i> Comment</p>
-							</div>
-							<div class="lcs-btn">
-								<p><i class="fas fa-share"></i> Share</p>
-							</div>
-						</div>
-
-
-						<div class="comment-site">
-							<div class="profil-ing-div">
-								<a href="#" id="profile-link">
-									<img id="Profile_images" src="images/friends/00.jpg">
-								</a>
-							</div>
-							<div class="comment-input">
-								<input type="text" placeholder="Write a comment…">
-								
-							</div>
-						</div>
-
-					</div>
-          
-
-          <!-- 3img -->
-
-          <div class="box-design post-div">
-						<div class="post-information">
-							<div>
-								<div class="profil-ing-div post-profile-img">
-								<a href="#" id="profile-link">
-									<img id="Profile_images" src="images/friends/00.jpg">
-								</a>
-							</div>
-							</div>
-							<div class="post-three-dot">
-								<h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
-								<p>
-									<a href="%">5d</a>
-									<span><i class="fas fa-user-friends"></i></span>
-								</p>
-
-								<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-							</div>
-						</div>
-
-            <div class="post-text-show">
-                    <p>Cooking tips</p>
-                    <p>cooking is my passion</p>
-			          </div>
-
-
-							<!-- <p class="post-hader-text" id="post_h_3I">Hello World.</p> -->
-							<div class="post-background-img">
-								<div>
-									<img id="post-image-3" src="/public/images/cook.png">
-								</div>
-
-								<div>
-									<div class="one-or-two">
-										<img id="post-image-4" src="/public/images/cook.png">
-									</div>
-									<div class="one-or-two">
-										<img id="post-image-5" src="/public/images/cook.png">
-									</div>
-								</div>
-							</div>
-
-						<div class="actavite">
-							<div class="lcs-btn lcs-btn_3i">
-								<p>
-									<i id="post-icon-btn_3i" class="far fa-thumbs-up"></i> 
-									<span id="post-icon-text_3i">Like</span>
-								</p>
-							</div>
-							<div class="lcs-btn">
-								<p><i class="far fa-comment-alt"></i> Comment</p>
-							</div>
-							<div class="lcs-btn">
-								<p><i class="fas fa-share"></i> Share</p>
-							</div>
-						</div>
-
-
-						<div class="comment-site">
-							<div class="profil-ing-div">
-								<a href="#" id="profile-link">
-									<img id="Profile_images" src="images/friends/00.jpg">
-								</a>
-							</div>
-							<div class="comment-input">
-								<input type="text" placeholder="Write a comment…">
-								
-							</div>
-						</div>
-
-					</div>
-
-
-          <!-- 4img -->
-
-          	<div class="box-design post-div">
-						<div class="post-information">
-							<div>
-								<div class="profil-ing-div post-profile-img">
-								<a href="#" id="profile-link">
-									<img id="Profile_images" src="images/friends/00.jpg">
-								</a>
-							</div>
-							</div>
-							<div class="post-three-dot">
-								<h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
-								<p>
-									<a href="%">5d</a>
-									<span><i class="fas fa-user-friends"></i></span>
-								</p>
-
-								<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-							</div>
-
-              
-						</div>
-
-            
                 <div class="post-text-show">
-                    <p>Cooking tips</p>
-                    <p>cooking is my passion</p>
-			          </div>	
-							<!-- <p class="post-hader-text" id="post_h_4I">Hello World.</p> -->
-							<div class="post-background-img">
-								<div>
-									<div class="one-or-two">
-										<img id="post-image-6" src="/public/images/kanna.jpg">
-									</div>
-									<div class="one-or-two">
-										<img id="post-image-7" src="/public/images/kanna.jpg">
-									</div>
-								</div>
+                  <p>Cooking tips</p>
+                  <p>cooking is my passion</p>
+                </div>
 
-								<div>
-									<div class="one-or-two">
-										<img id="post-image-8" src="/public/images/kanna.jpg">
-									</div>
-									<div class="one-or-two">
-										<img id="post-image-9" src="/public/images/kanna.jpg">
-									</div>
-								</div>
-							</div>
+                <div class="actavite">
+                  <div class="lcs-btn lcs-btn_0i">
+                    <p>
+                      <i id="post-icon-btn_0i" class="far fa-thumbs-up"></i>
+                      <span id="post-icon-text_0i">Like</span>
+                    </p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="far fa-comment-alt"></i> Comment</p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="fas fa-share"></i> Share</p>
+                  </div>
+                </div>
 
-						
-						<div class="actavite">
-							<div class="lcs-btn lcs-btn_4i">
-								<p>
-									<i id="post-icon-btn_4i" class="far fa-thumbs-up"></i> 
-									<span id="post-icon-text_4i">Like</span>
-								</p>
-							</div>
-							<div class="lcs-btn">
-								<p><i class="far fa-comment-alt"></i> Comment</p>
-							</div>
-							<div class="lcs-btn">
-								<p><i class="fas fa-share"></i> Share</p>
-							</div>
-						</div>
+                <div class="comment-site">
+                  <div class="profil-ing-div">
+                    <a href="#" id="profile-link">
+                      <img id="Profile_images" src="/public/images/user-img.jpg" />
+                    </a>
+                  </div>
+                   <a href="/html/comment.html">
+                    <div class="comment-input">
+                        Write a comment…
+                    </div>
+                  </a>
+                </div>
+              </div>
 
+              <!-- 2image -->
+              <div class="box-design post-div">
+                <div class="post-information">
+                  <div>
+                    <div class="profil-ing-div post-profile-img">
+                      <a href="#" id="profile-link">
+                        <img id="Profile_images" src="/public/images/user-img.jpg" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="post-three-dot">
+                    <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
+                    <p>
+                      <a href="%">5d</a>
+                    </p>
 
-						<div class="comment-site">
-							<div class="profil-ing-div">
-								<a href="#" id="profile-link">
-									<img id="Profile_images" src="images/friends/00.jpg">
-								</a>
-							</div>
-							<div class="comment-input">
-								<input type="text" placeholder="Write a comment…">
-								
-							</div>
-						</div>
+                    <span class="thre-dto-btn fas fa-ellipsis-h"></span>
+                  </div>
+                </div>
 
-					</div>
+                <div class="post-text-show">
+                  <p>Cooking tips</p>
+                  <p>cooking is my passion</p>
+                </div>
 
-      </section>
+                <!-- <p class="post-hader-text" id="post_h_2I">Hello World.</p> -->
+
+                <div class="post-background-img">
+                  <div>
+                    <img id="post-image-1" src="/public/images/cook.png" />
+                  </div>
+                  <div>
+                    <img id="post-image-2" src="/public/images/cook.png" />
+                  </div>
+                </div>
+
+                <div class="actavite">
+                  <div class="lcs-btn lcs-btn_2i">
+                    <p>
+                      <i id="post-icon-btn_2i" class="far fa-thumbs-up"></i>
+                      <span id="post-icon-text_2i">Like</span>
+                    </p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="far fa-comment-alt"></i> Comment</p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="fas fa-share"></i> Share</p>
+                  </div>
+                </div>
+
+                <div class="comment-site">
+                  <div class="profil-ing-div">
+                    <a href="#" id="profile-link">
+                      <img id="Profile_images" src="/public/images/user-img.jpg" />
+                    </a>
+                  </div>
+                  <a href="/html/comment.html">
+                    <div class="comment-input">
+                        Write a comment…
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- 3img -->
+
+              <div class="box-design post-div">
+                <div class="post-information">
+                  <div>
+                    <div class="profil-ing-div post-profile-img">
+                      <a href="#" id="profile-link">
+                        <img id="Profile_images" src="/public/images/user-img.jpg" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="post-three-dot">
+                    <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
+                    <p>
+                      <a href="%">5d</a>
+                    </p>
+
+                    <span class="thre-dto-btn fas fa-ellipsis-h"></span>
+                  </div>
+                </div>
+
+                <div class="post-text-show">
+                  <p>Cooking tips</p>
+                  <p>cooking is my passion</p>
+                </div>
+
+                <!-- <p class="post-hader-text" id="post_h_3I">Hello World.</p> -->
+                <div class="post-background-img">
+                  <div>
+                    <img id="post-image-3" src="/public/images/cook.png" />
+                  </div>
+
+                  <div>
+                    <div class="one-or-two">
+                      <img id="post-image-4" src="/public/images/cook.png" />
+                    </div>
+                    <div class="one-or-two">
+                      <img id="post-image-5" src="/public/images/cook.png" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="actavite">
+                  <div class="lcs-btn lcs-btn_3i">
+                    <p>
+                      <i id="post-icon-btn_3i" class="far fa-thumbs-up"></i>
+                      <span id="post-icon-text_3i">Like</span>
+                    </p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="far fa-comment-alt"></i> Comment</p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="fas fa-share"></i> Share</p>
+                  </div>
+                </div>
+
+                <div class="comment-site">
+                  <div class="profil-ing-div">
+                    <a href="#" id="profile-link">
+                      <img id="Profile_images" src="/public/images/user-img.jpg" />
+                    </a>
+                  </div>
+                   <a href="/html/comment.html">
+                    <div class="comment-input">
+                        Write a comment…
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- 4img -->
+
+              <div class="box-design post-div">
+                <div class="post-information">
+                  <div>
+                    <div class="profil-ing-div post-profile-img">
+                      <a href="#" id="profile-link">
+                        <img id="Profile_images" src="/public/images/user-img.jpg" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="post-three-dot">
+                    <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
+                    <p>
+                      <a href="%">5d</a>
+                    </p>
+
+                    <span class="thre-dto-btn fas fa-ellipsis-h"></span>
+                  </div>
+                </div>
+
+                <div class="post-text-show">
+                  <p>Cooking tips</p>
+                  <p>cooking is my passion</p>
+                </div>
+                <!-- <p class="post-hader-text" id="post_h_4I">Hello World.</p> -->
+                <div class="post-background-img">
+                  <div>
+                    <div class="one-or-two">
+                      <img id="post-image-6" src="/public/images/kanna.jpg" />
+                    </div>
+                    <div class="one-or-two">
+                      <img id="post-image-7" src="/public/images/kanna.jpg" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="one-or-two">
+                      <img id="post-image-8" src="/public/images/kanna.jpg" />
+                    </div>
+                    <div class="one-or-two">
+                      <img id="post-image-9" src="/public/images/kanna.jpg" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="actavite">
+                  <div class="lcs-btn lcs-btn_4i">
+                    <p>
+                      <i id="post-icon-btn_4i" class="far fa-thumbs-up"></i>
+                      <span id="post-icon-text_4i">Like</span>
+                    </p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="far fa-comment-alt"></i> Comment</p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="fas fa-share"></i> Share</p>
+                  </div>
+                </div>
+
+                <div class="comment-site">
+                  <div class="profil-ing-div">
+                    <a href="#" id="profile-link">
+                      <img id="Profile_images" src="/public/images/user-img.jpg" />
+                    </a>
+                  </div>
+                   <a href="/html/comment.html">
+                    <div class="comment-input">
+                        Write a comment…
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+              <div id="grid" class="profile__section__slide">
+                
+                
+                <div class="managePosts">
+                  <div class="datePosts">
+                    <p>November 2023</p>
+                    <button>Select All</button>
+                  </div>
+              <div class="allPost">
+                    <div class="aPost">
+                    <div class="managePost">
+                    <input type="checkbox">
+
+                    <img src="/public/images/heroCook.png" width="100px" alt="Post Image" />
+
+                   </div>
+
+                   <div class="info-post">
+                      <div class="info-img">
+                        <img src="/public/images/profile.png" alt="Profile Image" width="30px">
+                      </div>
+                      <div class="info-text">
+                        <h4>Kanna Kamui</h4>
+                        <p>10 November 2023</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                 
+                  </div>
+                 
+                </div>
+
+                <div class="managePosts">
+                  <div class="datePosts">
+                    <p>November 2023</p>
+                    <button>Select All</button>
+                  </div>
+
+                  <div class="allPost">
+                    <div class="aPost">
+                    <div class="managePost">
+                    <input type="checkbox">
+
+                    <img src="/public/images/heroCook.png" width="100px" alt="Post Image" />
+
+                   </div>
+
+                   <div class="info-post">
+                      <div class="info-img">
+                        <img src="/public/images/profile.png" alt="Profile Image" width="30px">
+                      </div>
+                      <div class="info-text">
+                        <h4>Kanna Kamui</h4>
+                        <p>10 November 2023</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="aPost">
+                    <div class="managePost">
+                    <input type="checkbox">
+
+                    <img src="/public/images/heroCook.png" width="100px" alt="Post Image" />
+
+                   </div>
+
+                   <div class="info-post">
+                      <div class="info-img">
+                        <img src="/public/images/profile.png" alt="Profile Image" width="30px">
+                      </div>
+                      <div class="info-text">
+                        <h4>Kanna Kamui</h4>
+                        <p>10 November 2023</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+
+                  <div class="aPost">
+                    <div class="managePost">
+                    <input type="checkbox">
+
+                    <img src="/public/images/heroCook.png" width="100px" alt="Post Image" />
+
+                   </div>
+
+                   <div class="info-post">
+                      <div class="info-img">
+                        <img src="/public/images/profile.png" alt="Profile Image" width="30px">
+                      </div>
+                      <div class="info-text">
+                        <h4>Kanna Kamui</h4>
+                        <p>10 November 2023</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  </div>
+
+                  
+
+                  
+                </div>
+
+              </div>
+              
+            </section>
+
+            <div class="load-more">
+              <button>Load More</button>
+            </div>
 
           </div>
 
           <div id="Saved" class="profile__section__tab__tabcontent">
-             <div class="profile__section__tab__tabcontent__container__image">
-              <img src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80" class="img-fluid">
-              <img src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80" class="img-fluid">
-              <img src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80" class="img-fluid">
+            <div class="profile__section__tab__tabcontent__container__image">
+              <img
+                src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80"
+                class="img-fluid"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80"
+                class="img-fluid"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80"
+                class="img-fluid"
+              />
             </div>
 
             <div class="profile__section__tab__tabcontent__container__image">
-              <img src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80" class="img-fluid">
-              <img src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80" class="img-fluid">
-              <img src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80" class="img-fluid">
+              <img
+                src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80"
+                class="img-fluid"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80"
+                class="img-fluid"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80"
+                class="img-fluid"
+              />
             </div>
 
             <div class="profile__section__tab__tabcontent__container__image">
-              <img src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80" class="img-fluid">
-              <img src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80" class="img-fluid">
-              <img src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80" class="img-fluid">
+              <img
+                src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80"
+                class="img-fluid"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80"
+                class="img-fluid"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?auto=format&fit=crop&w=668&q=80"
+                class="img-fluid"
+              />
             </div>
-
           </div>
         </div>
       </div>
-
-
-
-
-     
     </section>
 
     <script src="/html/profile.js"></script>

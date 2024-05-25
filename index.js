@@ -6,11 +6,22 @@ const express = require("express"),
   LocalStrategy = require("passport-local").Strategy,
   passportLocalMongoose = require("passport-local-mongoose");
 const User = require("./model/User");
+const Post = require("./model/Post");
+const Comment = require("./model/Comment");
 const bcrypt = require("bcrypt");
+const { name } = require("ejs");
 const session = require("express-session");
 let app = express();
 const multer  = require('multer')
-const upload = multer({ dest: './public/images/uploads' })
+const upload = multer({ 
+  dest: './public/images/uploads', 
+  limits: { 
+    fileSize: 4000000,
+    fields: [ 
+      { name: 'photos', maxCount: 8 }
+    ]
+  }
+})
 
 mongoose.connect("mongodb+srv://trieuduong:mithapnang12@colonthree.4y5dmo3.mongodb.net/?retryWrites=true&w=majority&appName=colonthree");
 
@@ -234,6 +245,19 @@ app.get("/recipes", isLoggedIn, (req, res) => {
 app.get("/createpost", isLoggedIn, (req, res) => {
   res.render("createPost");
 });
+
+app.post("/creatpost", upload.array('photos', 8), async function (req, res, next) {
+  const post = await Post.create({
+    title: req.body.title,
+    description: req.body.post-content,
+    id: req.user.id,
+    username: req.user.username,
+    image: req.files
+  });
+  setTimeout(() => {
+    res.redirect("/profile");
+  }, 1000);
+})
 
 // user profile
 app.get("/profile", isLoggedIn, (req, res) => {

@@ -11,13 +11,10 @@ var post = new Schema({
         type: String,
         required: true
     },
-    author: {
-        id: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
-        },
-        username: String
+    id: {
+        type: mongoose.Schema.Types.ObjectId,
     },
+    username: String,
     comments: [
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -27,7 +24,7 @@ var post = new Schema({
     image: [String],
     date: {
         type: Date,
-        default: Date.now
+        default: Date.now()
     },
     likes: [{type: String}],
 });

@@ -11,7 +11,7 @@ var comment = new Schema({
         },
         username: String
     },
-    likes: [like],
+    likes: [String],
     comments: [
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -20,6 +20,6 @@ var comment = new Schema({
     ],
 });
 
-post.plugin(passportLocalMongoose);
+comment.plugin(passportLocalMongoose);
  
 module.exports = mongoose.model('Comment', comment)

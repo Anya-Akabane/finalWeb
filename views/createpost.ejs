@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- css -->
-    <link rel="stylesheet" href="/public/css/sidebar.css"/>
-    <link rel="stylesheet" href="/public/css/createpost.css"/>
+    <link rel="stylesheet" href="/css/sidebar.css"/>
+    <link rel="stylesheet" href="/css/createpost.css"/>
 
 
     <!-- Boxicons CSS -->
@@ -28,7 +28,7 @@
         <div class="image-text">
           <span class="image">
             <a href="">
-              <img src="/public/images/logo-cookchat.png" alt="logo" />
+              <img src="/images/logo-cookchat.png" alt="logo" />
             </a>
           </span>
 
@@ -88,7 +88,7 @@
             <li class="nav-link">
               <a href="/views/profile.html" class="dropdown-toggle">
                 <i class="icon"
-                  ><img src="/public/images/profile.png" width="30px"
+                  ><img src="/images/profile.png" width="30px"
                 /></i>
                 <span class="text nav-text">Kanna Kamui</span>
               </a>
@@ -158,7 +158,7 @@
             <li class="nav__item">
               <a href="#profile" class="nav__link">
                 <img
-                  src="/public/images/profile.png"
+                  src="/images/profile.png"
                   width="25px"
                   class="nav__icon"
                 />
@@ -168,7 +168,7 @@
           </ul>
         </div>
 
-        <!-- <img src="/public/images/user-img.jpg" class="nav__img" width="40px"> -->
+        <!-- <img src="/images/user-img.jpg" class="nav__img" width="40px"> -->
       </nav>
     </header>
 
@@ -188,7 +188,7 @@
         </ul>
 
         <img
-          src="/public/images/user-img.jpg"
+          src="/images/user-img.jpg"
           width="40px"
           alt="profile"
           class="user-pic"
@@ -200,7 +200,7 @@
             <div class="user-info">
               <a href="" class="sub-menus-link">
                 <img
-                  src="/public/images/profile.png"
+                  src="/images/profile.png"
                   alt="profile"
                   class="profile-pic"
                 />
@@ -242,7 +242,7 @@
     <main class="home">
       <div class="create-a-post">
         <h1>Create a post</h1>
-        <form action="/submit" method="post" id="my-form" enctype="multipart/form-data">
+        <form action="/createpost" method="post" id="my-form" enctype="multipart/form-data">
             <label for="threadName">Find a thread</label>
             <input type="text" name="threadName" placeholder="Thread Name" id="threadName" aria-required="true"/>
             
@@ -264,7 +264,7 @@
     </div>
     </main>
 
-    <script src="/public/javascript/sidebar.js"></script>
-    <script src="/public/javascript/createpost.js"></script>
+    <script src="/javascript/sidebar.js"></script>
+    <script src="/javascript/createpost.js"></script>
   </body>
 </html>

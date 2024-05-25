@@ -830,6 +830,10 @@ body.dark .notification-drop .item ul {
   padding-top: 1rem;
 }
 
+body.dark .profile__profile__details__userName {
+  color: #fff;
+}
+
 
 .profile__profile__details__displayName h6{
   padding-bottom: 5px;
@@ -837,10 +841,13 @@ body.dark .notification-drop .item ul {
 
 }
 
+body.dark .profile__profile__details__displayName {
+  color: #fff;
+}
+
 .profile__profile__details__userName button {
   background-color: #ef3167;
-  border: 1px solid var(--borderColor);
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 5px;
   color: #ffff;
   cursor: pointer;
@@ -859,7 +866,9 @@ body.dark .notification-drop .item ul {
   cursor: pointer;
 }
 
-
+body.dark .profile__profile__details__userName button svg {
+  color: #fff;
+}
 
 
 .profile__section__tab {
@@ -868,6 +877,10 @@ body.dark .notification-drop .item ul {
   display: flex;
   justify-content: center;
   margin: 0 0 10px 0;
+}
+
+body.dark .profile__section__tab button {
+  color: #fff;
 }
 
 .profile__section__tab button {
@@ -886,6 +899,19 @@ body.dark .notification-drop .item ul {
 
 .profile__section__tab button svg {
   margin-right: 5px;
+}
+
+body.dark .profile__section__tab button svg {
+  color: #fff;
+}
+
+body.dark .profile__section__tab button.active {
+  color: #feb6d4;
+  border-top: 2px solid #f7609f;
+}
+
+body.dark .profile__section__tab button.active  svg{
+  color: #feb6d4;
 }
 
 .profile__section__tab__tabcontent {
@@ -932,6 +958,11 @@ body.dark .notification-drop .item ul {
     margin-left: auto;
     margin-right: auto;
 
+}
+
+body.dark .box-design {
+    background-color: #3335;
+    color: #fff;
 }
 
 .post-upload-T {
@@ -1032,6 +1063,12 @@ body.dark .notification-drop .item ul {
 	padding: 10px 0px;
 	cursor: pointer;
 }
+
+body.dark .fil-list,
+body.dark .fil-list i{
+  color: #fff;
+}
+
 .fil-list i {
 	margin-right: 5px;
 	color: #3339;
@@ -1052,6 +1089,11 @@ body.dark .notification-drop .item ul {
 	text-decoration: none;
 	color: #333;
 }
+
+body.dark .post-information div h2 a {
+  color: #fff;
+}
+
 .post-information div h2 a:hover {
 	text-decoration: underline;
 }
@@ -1061,10 +1103,19 @@ body.dark .notification-drop .item ul {
 	margin-top: 3px;
 	margin-left: 5px;
 }
+
+
+
+
 .post-information div p a {
 	text-decoration: none;
 	color: #3339;
 }
+
+body.dark .post-information div p a {
+  color: #fff;
+}
+
 .post-information div p a:hover {
 	text-decoration: underline;
 }
@@ -1082,6 +1133,9 @@ body.dark .notification-drop .item ul {
 .post-three-dot {
 	position: relative;
 }
+
+
+
 .post-three-dot .thre-dto-btn {
     position: absolute;
     top: 50%;
@@ -1143,6 +1197,12 @@ body.dark .notification-drop .item ul {
 .lcs-btn:hover {
 	background-color: #E4E6E9;
 }
+
+body.dark .lcs-btn:hover {
+  background-color: rgba(96, 95, 95, 0.333);
+}
+
+
 .lcs-btn {
 	border-radius: 5px;
 }
@@ -1150,11 +1210,17 @@ body.dark .notification-drop .item ul {
 	padding: 10px 0px;
 	font-size: 14px;
 	text-align: center;
-	color: #707070;
+	color: #676767;
 
 }
+
 .lcs-btn p i {
 	margin-left: 5px;
+}
+
+body.dark .lcs-btn p,
+body.dark .lcs-btn p i {
+  color: #b8b7b7;
 }
 
 
@@ -1195,7 +1261,9 @@ body.dark .notification-drop .item ul {
 }
 
 
-
+body.dark .post-text-show {
+  color: #fff;
+}
 
 
 .activ-li-div {
@@ -1219,10 +1287,20 @@ body.dark .notification-drop .item ul {
 
 }
 
+body.dark .list-type button {
+  background-color: inherit;
+ 
+}
+
 .slidelinks.activ-navbar {
 	position: relative;
 	background-color: #fff !important;
 	color: #fe036a !important;
+}
+
+body.dark .slidelinks.activ-navbar {
+  background-color: inherit !important;
+  color: #fff !important;
 }
 
 .slidelinks.activ-navbar .fil-list{
@@ -1356,8 +1434,8 @@ body.dark .notification-drop .item ul {
 
 .load-more button {
   padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: var(--sidebar-color);
+  background-color: #fe036a;
+  color: #fff;
   border: none;
   border-radius: 6px;
   font-size: 16px;
@@ -1380,6 +1458,11 @@ body.dark .notification-drop .item ul {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+body.dark .managePosts{
+    background-color: #3335;
+    color: #fff;
 }
 
 
@@ -1411,6 +1494,12 @@ body.dark .notification-drop .item ul {
 
 }
 
+body.dark .managePost{
+  background-color: #3d3c3d
+}
+
+
+
 .managePost {
   position: relative;
 }
@@ -1426,13 +1515,17 @@ body.dark .notification-drop .item ul {
 }
 
 .info-post{
-  background-color: #ffe7fe;
+  background-color: #f7e2ff;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 5px;
   font-size: 12px;
+}
+
+body.dark .info-post{
+  color: #18191a;
 }
 
 .aPost{

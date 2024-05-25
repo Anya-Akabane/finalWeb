@@ -850,6 +850,7 @@ body.dark .profile__profile__details__displayName {
   border-radius: 10px;
   padding: 5px;
   color: #ffff;
+  border: none;
   cursor: pointer;
 
 }

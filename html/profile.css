@@ -1424,6 +1424,8 @@ body.dark .notification-drop .item ul {
 
 .aPost{
   width: fit-content;
+  padding-bottom: 30px;
+
 
 }
 
@@ -1431,7 +1433,9 @@ body.dark .notification-drop .item ul {
   display: flex;
   flex-wrap: wrap;
   justify-content:space-between;
-  
+  padding-left: 30px;
+  padding-right: 30px;
+
 }
 
 

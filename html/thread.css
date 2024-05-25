@@ -1548,3 +1548,111 @@ body.dark .info-post{
 }
 
 
+.search-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+   }
+
+/* .search-filter input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+} */
+
+
+.search {
+  width: 100%;
+  display: flex;
+ 
+}
+
+.searchTerm {
+  border: 3px solid #fb2879;
+  border-right: none;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #000000;
+}
+
+.searchButton {
+  width: 50px;
+  border: 1px solid #fb2879;
+  background: #fb2879;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+}
+
+.search-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    width: 30%;
+}
+
+.search {
+    display: flex;
+}
+
+
+.searchButton {
+    width: 40px;
+    border: 1px solid #fb2879;
+    background: #fb2879;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.date-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+   
+}
+
+.date-filter label {
+    font-weight: bold;
+}
+/* 
+.date-filter input[type="date"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+} */
+
+.date-filter .filter-button {
+    padding: 5px 10px;
+    background-color: #fe036a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.date-filter .filter-button:hover {
+    background-color: #ff5680;
+}

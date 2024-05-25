@@ -1390,6 +1390,19 @@ body.dark .notification-drop .item ul {
   margin: 20px;
 }
 
+.datePosts button{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #fad0e8;
+  cursor: pointer;
+}
+
+.datePosts button:hover{
+  background-color: #ffb4c7;
+}
+
 .managePost{
   background-color: #f4f0f7;
   display: flex;
@@ -1413,7 +1426,7 @@ body.dark .notification-drop .item ul {
 }
 
 .info-post{
-  background-color: #fbd9d9;
+  background-color: #ffe7fe;
   display: flex;
   justify-content: center;
   align-items: center;

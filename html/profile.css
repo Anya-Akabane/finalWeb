@@ -1367,3 +1367,71 @@ body.dark .notification-drop .item ul {
 .load-more button:hover {
   background-color: #ff5680;
 }
+
+
+/* grid view */
+
+.managePosts{
+    border-radius: 18px;
+    box-shadow: 0px 1px 2px #3335;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.datePosts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.managePost{
+  background-color: #f4f0f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.managePost {
+  position: relative;
+}
+
+.managePost input[type="checkbox"] {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.managePost img{
+  
+}
+
+.info-post{
+  background-color: #fbd9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.aPost{
+  width: fit-content;
+
+}
+
+.allPost {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  
+}
+
+

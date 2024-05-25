@@ -10,7 +10,7 @@ const bcrypt = require("bcrypt");
 const session = require("express-session");
 let app = express();
 const multer  = require('multer')
-const upload = multer({ dest: './public/uploads' })
+const upload = multer({ dest: './public/images/uploads' })
 
 mongoose.connect("mongodb+srv://trieuduong:mithapnang12@colonthree.4y5dmo3.mongodb.net/?retryWrites=true&w=majority&appName=colonthree");
 

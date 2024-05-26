@@ -221,15 +221,15 @@ app.get("/adminPost", isLoggedIn, function (req, res) {
 });
 
 // Show admin communities
-app.get("/adminThread", isLoggedIn, function (req, res) {
-  res.render("adminThread");
-});
+// app.get("/adminThread", isLoggedIn, function (req, res) {
+//   res.render("adminThread");
+// });
 
 // user view thread
 
-app.get("/allthreads", isLoggedIn, (req, res) => {
-  res.render("allThreads");
-});
+// app.get("/allthreads", isLoggedIn, (req, res) => {
+//   res.render("allThreads");
+// });
 
 // user rating recipes
 
@@ -242,6 +242,13 @@ app.get("/recipes", isLoggedIn, (req, res) => {
 app.get("/createpost", isLoggedIn, (req, res) => {
   res.render("createPost");
 });
+
+// comment
+app.get("/comment", isLoggedIn, (req, res) => {
+  res.render("comment");
+});
+
+
 
 app.post("/creatpost", upload.array('photos', 8), async function (req, res, next) {
   const post = await Post.create({

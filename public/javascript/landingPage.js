@@ -17,3 +17,11 @@ headerMenuItems.forEach((item) => {
     headerMenu.classList.remove("show");
   });
 });
+
+
+const contactForm = document.querySelector(".contact__form");
+
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  alert("Your message has been sent!");
+});

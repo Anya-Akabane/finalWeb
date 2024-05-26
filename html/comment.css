@@ -802,7 +802,7 @@ body.dark .notification-drop .item ul {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15%;
+    margin-top: 10%;
     
 }
 
@@ -1225,9 +1225,7 @@ p{
     line-height: 1.5;
 }
 body{
-    height: 100%;
     width: 100%;
-    padding-top: 3rem;
     background-color: var(--Very-light-gray);
 }
 a{
@@ -1366,7 +1364,6 @@ button:hover{
     justify-items: center;
     gap: 1rem;
     min-height: 9rem;
-    margin-bottom: 4rem;
 }
 .reply-input img{
     grid-area: avatar;

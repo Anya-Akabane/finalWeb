@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- css -->
-    <link rel="stylesheet" href="/css/sidebar.css"/>
-    <link rel="stylesheet" href="/css/createpost.css"/>
-
+    <link rel="stylesheet" href="/css/sidebar.css" />
+    <link rel="stylesheet" href="/css/createpost.css" />
 
     <!-- Boxicons CSS -->
     <link
@@ -16,8 +15,6 @@
     />
 
     <!-- Quill -->
-  
-
 
     <title>Document</title>
   </head>
@@ -36,7 +33,6 @@
             <a href="#">
               <span class="name">COOKCHAT</span>
             </a>
-            
           </div>
         </div>
 
@@ -157,11 +153,7 @@
 
             <li class="nav__item">
               <a href="#profile" class="nav__link">
-                <img
-                  src="/images/profile.png"
-                  width="25px"
-                  class="nav__icon"
-                />
+                <img src="/images/profile.png" width="25px" class="nav__icon" />
                 <span class="nav__name">Profile</span>
               </a>
             </li>
@@ -220,8 +212,7 @@
             </a>
 
             <a href="#" class="sub-menus-link" id="darkModeToggle">
-              <i class="bx bx-moon
-              "></i>
+              <i class="bx bx-moon"></i>
               <p>Switch Theme</p>
             </a>
 
@@ -242,23 +233,58 @@
     <main class="home">
       <div class="create-a-post">
         <h1>Create a post</h1>
-        <form action="/createpost" method="post" id="my-form" enctype="multipart/form-data">
+        <form
+          action="/createpost"
+          method="post"
+          id="my-form"
+          enctype="multipart/form-data"
+        >
+          <div>
             <label for="title">Title</label>
-            <input type="text" name="title" placeholder="Title" id="title" aria-required="true"/>
-            
+            <input
+              type="text"
+              name="title"
+              placeholder="Title"
+              id="title"
+              aria-required="true"
+            />
+          </div>
+
+          <div>
             <label for="post-content">Content</label>
-            <textarea id="post-content" name="content" rows="4" cols="37" placeholder="Insert your content here" aria-required="true"></textarea>
-            
+            <textarea
+              id="post-content"
+              name="content"
+              rows="4"
+              cols="37"
+              placeholder="Insert your content here"
+              aria-required="true"
+            ></textarea>
+          </div>
+
+          <div>
             <label for="photos">Upload photos</label>
             <div id="drop-zone" role="button" tabindex="0">
-            Drop your files here
+              Drop your files here
             </div>
-            <input style="display:none;" type="file" id="photos" name="photos" accept="image/jpeg, image/png, image/jpg" multiple onchange="previewImages()"/>          
+          </div>
+
+          <div>
+            <input
+              style="display: none"
+              type="file"
+              id="photos"
+              name="photos"
+              accept="image/jpeg, image/png, image/jpg"
+              multiple
+              onchange="previewImages()"
+            />
             <div id="imagePreview"></div>
-    
+
             <button type="submit">Submit</button>
+          </div>
         </form>
-    </div>
+      </div>
     </main>
 
     <script src="/javascript/sidebar.js"></script>

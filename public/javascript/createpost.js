@@ -152,3 +152,23 @@ fileInput.onchange = function() {
     });
     previewImages();
 };
+
+document.querySelector('#my-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  let formData = new FormData(e.target);
+
+  // Append each file in filesArray to formData
+  filesArray.forEach((file, index) => {
+      formData.append('photos' + index, file);
+  });
+
+  // Send formData using fetch API
+  fetch('/submit', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+});

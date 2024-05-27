@@ -56,7 +56,7 @@ function previewImages() {
     (img);
     reader.readAsDataURL(file);
   }
-  fileInput.value = ''; // clear the file input for additional uploads
+  // fileInput.value = ''; // clear the file input for additional uploads
 }
 
 // This function handles the 'ondrop' event for the drop zone. It's triggered when the user drags and drops files onto the drop zone, unlike the 'onchange' event which is triggered when files are selected via the file input dialog.
@@ -146,3 +146,23 @@ fileInput.onchange = function() {
     });
     previewImages();
 };
+
+document.querySelector('#my-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  let formData = new FormData(e.target);
+
+  // Append each file in filesArray to formData
+  filesArray.forEach((file, index) => {
+      formData.append('photos' + index, file);
+  });
+
+  // Send formData using fetch API
+  fetch('/submit', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+});

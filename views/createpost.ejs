@@ -247,6 +247,7 @@
               placeholder="Title"
               id="title"
               aria-required="true"
+              required
             />
           </div>
 
@@ -259,6 +260,7 @@
               cols="37"
               placeholder="Insert your content here"
               aria-required="true"
+              required
             ></textarea>
           </div>
 
@@ -276,8 +278,7 @@
               id="photos"
               name="photos"
               accept="image/jpeg, image/png, image/jpg"
-              multiple
-              onchange="previewImages()"
+              onchange="previewImage()"
             />
             <div id="imagePreview"></div>
 

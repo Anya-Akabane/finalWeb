@@ -62,7 +62,7 @@ function previewImages() {
     (img);
     reader.readAsDataURL(file);
   }
-  fileInput.value = ''; // clear the file input for additional uploads
+  // fileInput.value = ''; // clear the file input for additional uploads
 }
 
 // This function handles the 'ondrop' event for the drop zone. It's triggered when the user drags and drops files onto the drop zone, unlike the 'onchange' event which is triggered when files are selected via the file input dialog.

@@ -1111,7 +1111,9 @@ body.dark .post-information div h2 a {
 	margin-left: 5px;
 }
 
-
+body.dark .post-information div p {
+  color: #fff;
+}
 
 
 .post-information div p a {

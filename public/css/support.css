@@ -164,6 +164,7 @@ body.dark {
 @media (max-width: 991px){
     .contact1{
         padding: 50px;
+        top: 7rem;
     }
 
     .container1{

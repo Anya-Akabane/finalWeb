@@ -804,6 +804,7 @@ body.dark .notification-drop .item ul {
 
 .profile__profile__logo {
   /* flex: 1; */
+  margin-left: 2rem;
   margin-right: 2rem;
   text-align: center;
 }
@@ -992,6 +993,7 @@ body.dark .box-design {
 }
 
 .text-post {
+  margin-left: 5px;
 	position: relative;
 	width: 100%;
 	padding: 7px 10px;
@@ -1241,6 +1243,7 @@ body.dark .lcs-btn p i {
 }
 
 .comment-input {
+  margin-left: 10px;
 	width: 100%;
 	border: none;
 	outline: none;
@@ -1568,6 +1571,7 @@ body.dark .info-post{
 .search {
   width: 100%;
   display: flex;
+  justify-content: center;
  
 }
 

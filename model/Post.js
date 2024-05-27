@@ -22,12 +22,15 @@ var post = new Schema({
             ref: "Comment"
         }
     ],
-    image: [String],
+    image: String,
     date: {
         type: Date,
         default: Date.now()
     },
-    likes: [{type: String}],
+    likes: [{
+        type: String,
+        ref: 'Likes'
+    }],
 });
 
 post.plugin(passportLocalMongoose);

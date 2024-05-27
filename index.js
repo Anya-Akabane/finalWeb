@@ -12,15 +12,33 @@ const { name } = require("ejs");
 const session = require("express-session");
 let app = express();
 const multer  = require('multer')
-const upload = multer({ 
-  dest: './public/images/uploads', 
-  limits: { 
-    fileSize: 4000000,
-    fields: [ 
-      { name: 'photos', maxCount: 8 }
-    ]
+// Configure Multer storage
+const storage = multer.diskStorage({
+  // Set the destination directory for uploaded files
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/'); // Files will be saved in the 'uploads/' directory
+  },
+  // Set the filename for uploaded files
+  filename: (req, file, cb) => {
+    // Prepend the current timestamp to the original filename to ensure uniqueness
+    cb(null, Date.now() + '-' + file.originalname);
   }
-})
+});
+
+const fileFilter = (req, file, cb) => {
+  // Accept only image files (jpeg, png)
+  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+    cb(null, true);
+  } else {
+    cb(new Error('Invalid file type. Only JPEG and PNG files are allowed.'), false);
+  }
+};
+
+// Create a Multer instance with the configured storage settings
+const upload = multer({ 
+  storage: storage ,
+  fileFilter: fileFilter
+});
 
 mongoose.connect(
   "mongodb+srv://trieuduong:mithapnang12@colonthree.4y5dmo3.mongodb.net/?retryWrites=true&w=majority&appName=colonthree"
@@ -250,17 +268,25 @@ app.get("/comment", isLoggedIn, (req, res) => {
 
 
 
-app.post("/creatpost", upload.array('photos', 8), async function (req, res, next) {
-  const post = await Post.create({
-    title: req.body.title,
-    description: req.body.post-content,
-    id: req.user.id,
-    username: req.user.username,
-    image: req.files
-  });
+app.post("/createpost", upload.single('photos'), async function (req, res, next) {
+  if(req.file) {
+    const post = await Post.create({
+      title: req.body.title,
+      description: req.body.content,
+      id: req.user.id,
+      username: req.user.username,
+      image: req.file.filename
+    });}
+  else {
+    const post = await Post.create({
+      title: req.body.title,
+      description: req.body.content,
+      id: req.user.id,
+      username: req.user.username  
+    })};
   setTimeout(() => {
     res.redirect("/profile");
-  }, 1000);
+  }, 500);
 })
 
 // user profile

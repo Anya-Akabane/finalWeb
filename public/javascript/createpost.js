@@ -32,12 +32,6 @@ function previewImages() {
   var preview = document.getElementById('imagePreview');
   var files = fileInput.files;
 
-  // If files contains more than four files, remove the excess files, alert the user, and return
-  if (files.length > 4) {
-    files = Array.from(files).slice(0, 4);
-    alert("You can only upload four images.");
-  }
-
   for (var i = 0; i < files.length; i++) {
     var file = files[i];
     var img = document.createElement('img');

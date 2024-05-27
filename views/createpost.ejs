@@ -243,20 +243,17 @@
       <div class="create-a-post">
         <h1>Create a post</h1>
         <form action="/createpost" method="post" id="my-form" enctype="multipart/form-data">
-            <label for="threadName">Find a thread</label>
-            <input type="text" name="threadName" placeholder="Thread Name" id="threadName" aria-required="true"/>
-            
             <label for="title">Title</label>
             <input type="text" name="title" placeholder="Title" id="title" aria-required="true"/>
             
             <label for="post-content">Content</label>
-            <textarea id="post-content" name="post-content" rows="4" cols="37" placeholder="Insert your content here" aria-required="true"></textarea>
+            <textarea id="post-content" name="content" rows="4" cols="37" placeholder="Insert your content here" aria-required="true"></textarea>
             
             <label for="photos">Upload photos</label>
             <div id="drop-zone" role="button" tabindex="0">
             Drop your files here
             </div>
-            <input style="display:none;" type="file" id="photos" name="photos" accept="image/*" multiple onchange="previewImages()"/>          
+            <input style="display:none;" type="file" id="photos" name="photos" accept="image/jpeg, image/png, image/jpg" multiple onchange="previewImages()"/>          
             <div id="imagePreview"></div>
     
             <button type="submit">Submit</button>

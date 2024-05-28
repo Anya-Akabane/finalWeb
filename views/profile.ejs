@@ -444,7 +444,7 @@
 
               <!-- POST -->
 
-              
+              <% posts.forEach((post) => { %>
               <div class="box-design post-div">
                 <div class="post-information">
                   <div>
@@ -456,7 +456,7 @@
                   </div>
 
                   <div class="post-three-dot">
-                    <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
+                    <h2><a href="#" id="profile_name"><%= post.username %></a></h2>
                     <p>
                       <a href="%">5min</a>
                     </p>
@@ -466,14 +466,14 @@
                 </div>
 
                 <div class="post-text-show">
-                  <p>Cooking tips</p>
-                  <p>cooking is my passion</p>
+                  <p><%= post.title %></p>
+                  <p><%= post.description %></p>
                 </div>
 
                 <img
                   id="post-image-12"
                   class="post-images"
-                  src="/images/cook.png"
+                  src="./uploads/<%= post.image %>"
                 />
 
                 <div class="actavite">
@@ -504,6 +504,7 @@
                   </a>
                 </div>
               </div>
+              <% }) %>
 
               <!-- no image -->
               <div class="box-design post-div">

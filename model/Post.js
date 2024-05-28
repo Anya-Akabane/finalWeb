@@ -12,7 +12,7 @@ var post = new Schema({
         type: String,
         required: true
     },
-    id: {
+    userId: {
         type: mongoose.Schema.Types.ObjectId,
     },
     username: String,

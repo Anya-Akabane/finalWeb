@@ -72,6 +72,7 @@ passport.use(
       try {
         // Find the user by email in the database
         const user = await User.findOne({ email });
+        console.log("user" + user)
         // If the user does not exist, return an error
         if (!user) {
           return done(null, false, { error: "Incorrect email" });
@@ -273,7 +274,7 @@ app.post("/createpost", upload.single('photos'), async function (req, res, next)
     const post = await Post.create({
       title: req.body.title,
       description: req.body.content,
-      id: req.user.id,
+      userId: req.user.id,
       username: req.user.username,
       image: req.file.filename
     });}
@@ -290,8 +291,15 @@ app.post("/createpost", upload.single('photos'), async function (req, res, next)
 })
 
 // user profile
-app.get("/profile", isLoggedIn, (req, res) => {
-  res.render("profile");
+app.get("/profile", isLoggedIn, async (req, res) => {
+  var count = 0;
+  console.log("user id " + req.user.id)
+  const posts =  await Post.find({userId: req.user.id});
+  console.log("profile" + posts)
+  res.render("profile", {
+    posts
+  });
+  count = count + 10;
 });
 
 // user search

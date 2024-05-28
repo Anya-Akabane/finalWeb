@@ -847,7 +847,7 @@ body.dark .profile__profile__details__displayName {
   color: #fff;
 }
 
-.profile__profile__details__userName button {
+.profile__profile__details__userName .profileS{
   background-color: #ef3167;
   border-radius: 10px;
   padding: 5px;
@@ -857,13 +857,13 @@ body.dark .profile__profile__details__displayName {
 
 }
 
-.profile__profile__details__userName button:hover {
+.profile__profile__details__userName .profileS:hover {
   background-color: #ff5680;
 }
 
 
 
-.profile__profile__details__userName button:last-child {
+.profile__profile__details__userName a svg {
   border: none;
   background-color: transparent;
   cursor: pointer;

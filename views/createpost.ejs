@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- sidebar -->
-    <nav class="sidebar close">
+     <nav class="sidebar close">
       <header>
         <div class="image-text">
           <span class="image">
@@ -30,7 +30,7 @@
           </span>
 
           <div class="text header-text">
-            <a href="#">
+            <a href="/thread">
               <span class="name">COOKCHAT</span>
             </a>
           </div>
@@ -48,43 +48,58 @@
 
           <ul class="menu-links">
             <li class="nav-link">
-              <a href="#">
+              <a href="/thread">
                 <i class="bx bx-home-alt icon"></i>
                 <span class="text nav-text">Home</span>
               </a>
             </li>
             <li class="nav-link">
-              <a href="#">
+              <a href="/recipes">
                 <i class="bx bx-bowl-hot icon"></i>
                 <span class="text nav-text">Recipes</span>
               </a>
             </li>
 
-            <li class="nav-link">
-              <a href="#">
+            <!-- <li class="nav-link">
+              <a href="/save">
                 <i class="bx bx-bookmark icon"></i>
                 <span class="text nav-text">Save</span>
               </a>
-            </li>
+            </li> -->
 
             <li class="nav-link">
-              <a href="#">
+              <a href="/createPost">
                 <i class="bx bxs-plus-square icon"></i>
                 <span class="text nav-text">Create Post</span>
               </a>
             </li>
 
-            <li class="nav-link">
+            <!-- <li class="nav-link">
               <a href="#" class="dropdown-toggle">
                 <i class="bx bx-group icon"></i>
                 <span class="text nav-text">Communities</span>
               </a>
+            </li> -->
+
+             <li class="nav-link">
+              <a href="/settings" class="dropdown-toggle">
+                <i class="bx bx-cog icon"></i>
+                <span class="text nav-text">Settings</span>
+              </a>
             </li>
 
+              <li class="nav-link">
+              <a href="/support">
+                <i class='bx bx-help-circle icon'></i>
+                <span class="text nav-text">Support</span>
+              </a>
+            </li>
+
+
             <li class="nav-link">
-              <a href="/views/profile.html" class="dropdown-toggle">
+              <a href="/profile" class="dropdown-toggle">
                 <i class="icon"
-                  ><img src="/images/profile.png" width="30px"
+                  ><img src="/images/userLogin.png" width="30px"
                 /></i>
                 <span class="text nav-text">Kanna Kamui</span>
               </a>
@@ -93,7 +108,7 @@
         </div>
         <div class="bottom-content">
           <li class="">
-            <a href="#">
+            <a href="/logout">
               <i class="bx bx-log-out icon"></i>
               <span class="text nav-text">Log out</span>
             </a>
@@ -119,68 +134,64 @@
 
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">COOKCHAT</a>
+        <a href="/thread" class="nav__logo">COOKCHAT</a>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">
+              <a href="/thread" class="nav__link active-link">
                 <i class="bx bx-home-alt nav__icon"></i>
                 <span class="nav__name">Home</span>
               </a>
             </li>
 
-            <li class="nav__item">
-              <a href="#search" class="nav__link">
+            <!-- <li class="nav__item">
+              <a href="/search" class="nav__link">
                 <i class="bx bx-search nav__icon"></i>
                 <span class="nav__name">Search</span>
               </a>
-            </li>
+            </li> -->
 
             <li class="nav__item">
-              <a href="#create" class="nav__link">
-                <i class="bx bx-plus-circle nav__icon"></i>
-                <span class="nav__name">Create</span>
-              </a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#recipes" class="nav__link">
+              <a href="/recipes" class="nav__link">
                 <i class="bx bx-bowl-hot nav__icon"></i>
                 <span class="nav__name">Recipes</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="#profile" class="nav__link">
-                <img src="/images/profile.png" width="25px" class="nav__icon" />
+              <a href="/createPost" class="nav__link">
+                <i class="bx bx-plus-circle nav__icon"></i>
+                <span class="nav__name">Create</span>
+              </a>
+            </li>
+
+             <li class="nav__item">
+              <a href="/settings" class="nav__link">
+                <i class="bx bx-cog nav__icon"></i>
+                <span class="nav__name">Settings</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="/profile" class="nav__link">
+                <img src="/images/userLogin.png" width="25px" class="nav__icon" />
                 <span class="nav__name">Profile</span>
               </a>
             </li>
           </ul>
         </div>
 
-        <!-- <img src="/images/user-img.jpg" class="nav__img" width="40px"> -->
+        <!-- <img src="/images/userLogin.png" class="nav__img" width="40px"> -->
       </nav>
     </header>
 
     <div class="hero">
       <nav>
-        <ul class="notification-drop">
-          <li class="item">
-            <i class="bx bxs-bell notification-bell" aria-hidden="true"></i>
-            <span class="btn__badge pulse-button">4</span>
-
-            <ul>
-              <li>First Item</li>
-              <li>Second Item</li>
-              <li>Third Item</li>
-            </ul>
-          </li>
-        </ul>
+       
 
         <img
-          src="/images/user-img.jpg"
+          src="/images/userLogin.png"
           width="40px"
           alt="profile"
           class="user-pic"
@@ -192,21 +203,21 @@
             <div class="user-info">
               <a href="" class="sub-menus-link">
                 <img
-                  src="/images/profile.png"
+                  src="/images/userLogin.png"
                   alt="profile"
                   class="profile-pic"
                 />
-                <h3>Kanna Kamui</h3>
+                <h3>User</h3>
               </a>
             </div>
             <hr />
 
-            <a href="#" class="sub-menus-link">
+            <a href="/settings" class="sub-menus-link">
               <i class="bx bx-cog"></i>
               <p>Settings</p>
             </a>
 
-            <a href="#" class="sub-menus-link">
+            <a href="/adminLock" class="sub-menus-link">
               <i class="bx bxs-dashboard"></i>
               <p>Admin</p>
             </a>
@@ -216,12 +227,12 @@
               <p>Switch Theme</p>
             </a>
 
-            <a href="#" class="sub-menus-link">
+            <a href="/support" class="sub-menus-link">
               <i class="bx bx-help-circle"></i>
               <p>Help & Support</p>
             </a>
 
-            <a href="#" class="sub-menus-link">
+            <a href="/logout" class="sub-menus-link">
               <i class="bx bx-log-out"></i>
               <p>Log Out</p>
             </a>

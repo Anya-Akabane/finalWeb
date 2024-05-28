@@ -32,7 +32,7 @@
           </span>
 
           <div class="text header-text">
-            <a href="#">
+            <a href="/thread">
               <span class="name">COOKCHAT</span>
             </a>
           </div>
@@ -62,12 +62,12 @@
               </a>
             </li>
 
-            <li class="nav-link">
+            <!-- <li class="nav-link">
               <a href="/save">
                 <i class="bx bx-bookmark icon"></i>
                 <span class="text nav-text">Save</span>
               </a>
-            </li>
+            </li> -->
 
             <li class="nav-link">
               <a href="/createPost">
@@ -90,11 +90,18 @@
               </a>
             </li>
 
+              <li class="nav-link">
+              <a href="/support">
+                <i class='bx bx-help-circle icon'></i>
+                <span class="text nav-text">Support</span>
+              </a>
+            </li>
+
 
             <li class="nav-link">
               <a href="/profile" class="dropdown-toggle">
                 <i class="icon"
-                  ><img src="/images/profile.png" width="30px"
+                  ><img src="/images/userLogin.png" width="30px"
                 /></i>
                 <span class="text nav-text">Kanna Kamui</span>
               </a>
@@ -162,42 +169,31 @@
             </li>
 
              <li class="nav__item">
-              <a href="/save" class="nav__link">
-                <i class="bx bx-bookmark nav__icon"></i>
-                <span class="nav__name">Save</span>
+              <a href="/settings" class="nav__link">
+                <i class="bx bx-cog nav__icon"></i>
+                <span class="nav__name">Settings</span>
               </a>
             </li>
 
             <li class="nav__item">
               <a href="/profile" class="nav__link">
-                <img src="/images/profile.png" width="25px" class="nav__icon" />
+                <img src="/images/userLogin.png" width="25px" class="nav__icon" />
                 <span class="nav__name">Profile</span>
               </a>
             </li>
           </ul>
         </div>
 
-        <!-- <img src="/images/user-img.jpg" class="nav__img" width="40px"> -->
+        <!-- <img src="/images/userLogin.png" class="nav__img" width="40px"> -->
       </nav>
     </header>
 
     <div class="hero">
       <nav>
-        <ul class="notification-drop">
-          <li class="item">
-            <i class="bx bxs-bell notification-bell" aria-hidden="true"></i>
-            <span class="btn__badge pulse-button">4</span>
-
-            <ul>
-              <li>First Item</li>
-              <li>Second Item</li>
-              <li>Third Item</li>
-            </ul>
-          </li>
-        </ul>
+       
 
         <img
-          src="/images/user-img.jpg"
+          src="/images/userLogin.png"
           width="40px"
           alt="profile"
           class="user-pic"
@@ -209,11 +205,11 @@
             <div class="user-info">
               <a href="" class="sub-menus-link">
                 <img
-                  src="/images/profile.png"
+                  src="/images/userLogin.png"
                   alt="profile"
                   class="profile-pic"
                 />
-                <h3>Kanna Kamui</h3>
+                <h3>User</h3>
               </a>
             </div>
             <hr />
@@ -374,8 +370,8 @@
               <div class="box-design">
                 <div class="post-upload-T">
                   <div class="profil-ing-div">
-                    <a href="#" id="profile-link">
-                      <img id="Profile_images" src="/images/user-img.jpg" />
+                    <a href="/profile" id="profile-link">
+                      <img id="Profile_images" src="/images/userLogin.png" />
                     </a>
                   </div>
                   <div class="text-post">
@@ -417,7 +413,7 @@
                   <div>
                     <div class="profil-ing-div post-profile-img">
                       <a href="#" id="profile-link">
-                        <img id="Profile_images" src="/images/user-img.jpg" />
+                        <img id="Profile_images" src="/images/userLogin.png" />
                       </a>
                     </div>
                   </div>
@@ -425,10 +421,12 @@
                   <div class="post-three-dot">
                     <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
                     <p>
-                      <a href="%">5min</a>
+                      5min
                     </p>
 
-                    <span class="thre-dto-btn fas fa-ellipsis-h"></span>
+                    <span class="thre-dto-btn fas fa-ellipsis-h">
+                      
+                    </span>
                   </div>
                 </div>
 
@@ -461,10 +459,10 @@
                 <div class="comment-site">
                   <div class="profil-ing-div">
                     <a href="#" id="profile-link">
-                      <img id="Profile_images" src="/images/user-img.jpg" />
+                      <img id="Profile_images" src="/images/userLogin.png" />
                     </a>
                   </div>
-                  <a href="/html/comment.html">
+                  <a href="/comment">
                     <div class="comment-input">
                         Write a comment…
                     </div>
@@ -478,7 +476,7 @@
                   <div>
                     <div class="profil-ing-div post-profile-img">
                       <a href="#" id="profile-link">
-                        <img id="Profile_images" src="/images/user-img.jpg" />
+                        <img id="Profile_images" src="/images/userLogin.png" />
                       </a>
                     </div>
                   </div>
@@ -486,7 +484,7 @@
                   <div class="post-three-dot">
                     <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
                     <p>
-                      <a href="%">5min</a>
+                      5min
                     </p>
 
                     <span class="thre-dto-btn fas fa-ellipsis-h"></span>
@@ -516,10 +514,10 @@
                 <div class="comment-site">
                   <div class="profil-ing-div">
                     <a href="#" id="profile-link">
-                      <img id="Profile_images" src="/images/user-img.jpg" />
+                      <img id="Profile_images" src="/images/userLogin.png" />
                     </a>
                   </div>
-                   <a href="/html/comment.html">
+                   <a href="/comment">
                     <div class="comment-input">
                         Write a comment…
                     </div>
@@ -533,14 +531,14 @@
                   <div>
                     <div class="profil-ing-div post-profile-img">
                       <a href="#" id="profile-link">
-                        <img id="Profile_images" src="/images/user-img.jpg" />
+                        <img id="Profile_images" src="/images/userLogin.png" />
                       </a>
                     </div>
                   </div>
                   <div class="post-three-dot">
                     <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
                     <p>
-                      <a href="%">5d</a>
+                      5d
                     </p>
 
                     <span class="thre-dto-btn fas fa-ellipsis-h"></span>
@@ -581,10 +579,10 @@
                 <div class="comment-site">
                   <div class="profil-ing-div">
                     <a href="#" id="profile-link">
-                      <img id="Profile_images" src="/images/user-img.jpg" />
+                      <img id="Profile_images" src="/images/userLogin.png" />
                     </a>
                   </div>
-                  <a href="/html/comment.html">
+                  <a href="/comment">
                     <div class="comment-input">
                         Write a comment…
                     </div>
@@ -599,14 +597,14 @@
                   <div>
                     <div class="profil-ing-div post-profile-img">
                       <a href="#" id="profile-link">
-                        <img id="Profile_images" src="/images/user-img.jpg" />
+                        <img id="Profile_images" src="/images/userLogin.png" />
                       </a>
                     </div>
                   </div>
                   <div class="post-three-dot">
                     <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
                     <p>
-                      <a href="%">5d</a>
+                      5d
                     </p>
 
                     <span class="thre-dto-btn fas fa-ellipsis-h"></span>
@@ -652,10 +650,10 @@
                 <div class="comment-site">
                   <div class="profil-ing-div">
                     <a href="#" id="profile-link">
-                      <img id="Profile_images" src="/images/user-img.jpg" />
+                      <img id="Profile_images" src="/images/userLogin.png" />
                     </a>
                   </div>
-                   <a href="/html/comment.html">
+                   <a href="/comment">
                     <div class="comment-input">
                         Write a comment…
                     </div>
@@ -670,14 +668,14 @@
                   <div>
                     <div class="profil-ing-div post-profile-img">
                       <a href="#" id="profile-link">
-                        <img id="Profile_images" src="/images/user-img.jpg" />
+                        <img id="Profile_images" src="/images/userLogin.png" />
                       </a>
                     </div>
                   </div>
                   <div class="post-three-dot">
                     <h2><a href="#" id="profile_name">Kanna Kamui</a></h2>
                     <p>
-                      <a href="%">5d</a>
+                      5d
                     </p>
 
                     <span class="thre-dto-btn fas fa-ellipsis-h"></span>
@@ -727,10 +725,10 @@
                 <div class="comment-site">
                   <div class="profil-ing-div">
                     <a href="#" id="profile-link">
-                      <img id="Profile_images" src="/images/user-img.jpg" />
+                      <img id="Profile_images" src="/images/userLogin.png" />
                     </a>
                   </div>
-                   <a href="/html/comment.html">
+                   <a href="/comment">
                     <div class="comment-input">
                         Write a comment…
                     </div>

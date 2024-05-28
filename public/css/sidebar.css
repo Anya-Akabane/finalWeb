@@ -305,7 +305,7 @@ body.dark .switch::before {
   position: absolute;
   padding: 8px 8px;
   left: 6%;
-  top: 7%;
+  top: 3rem;
 }
 
 .sidebar.close ~ .home {
@@ -505,7 +505,7 @@ body.dark .switch::before {
   .hero .user-pic {
     width: 30px;
     margin-left: 10px;
-    margin-top: -20px;
+    /* margin-top: -20px; */
   }
 
   .hero .notification-bell {

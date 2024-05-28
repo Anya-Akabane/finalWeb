@@ -22,7 +22,10 @@ var post = new Schema({
             ref: "Comment"
         }
     ],
-    image: String,
+    image: {
+        type: String,
+        default: "1716906028797-th-2339855844.jpg"
+    },
     date: {
         type: Date,
         default: Date.now()

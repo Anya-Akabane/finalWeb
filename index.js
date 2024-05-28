@@ -292,14 +292,10 @@ app.post("/createpost", upload.single('photos'), async function (req, res, next)
 
 // user profile
 app.get("/profile", isLoggedIn, async (req, res) => {
-  var count = 0;
-  console.log("user id " + req.user.id)
   const posts =  await Post.find({userId: req.user.id});
-  console.log("profile" + posts)
   res.render("profile", {
     posts
   });
-  count = count + 10;
 });
 
 // user search

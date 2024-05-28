@@ -448,7 +448,7 @@
               <!-- POST -->
 
               <% posts.forEach((post) => { %>
-              <div class="box-design post-div">
+                <div class="box-design post-div">
                 <div class="post-information">
                   <div>
                     <div class="profil-ing-div post-profile-img">
@@ -479,6 +479,7 @@
                   class="post-images"
                   src= "/uploads/<%= post.image %>"
                 >
+                <% console.log("/uploads/" + post.image) %>
 
                 <div class="actavite">
                   <div class="lcs-btn lcs-btn_i">

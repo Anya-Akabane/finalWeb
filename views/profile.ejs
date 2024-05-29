@@ -480,12 +480,12 @@
                 </div>
 
                 
-                <img
-                  id="post-image-12"
+                <% if(post.image !== null) { %>
+                <img id="post-image-12"
                   class="post-images"
                   src= "/uploads/<%= post.image %>"
-                >
-                <% console.log("/uploads/" + post.image) %>
+                > 
+                <% } %>
 
                 <div class="actavite">
                   <div class="lcs-btn lcs-btn_i">

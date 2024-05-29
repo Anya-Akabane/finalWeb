@@ -117,7 +117,9 @@ app.get("/", function (req, res) {
 
 // Showing secret page
 app.get("/thread", isLoggedIn, function (req, res) {
-  res.render("thread");
+  res.render("thread", {
+    user: req.user.username
+  });
 });
 
 // Showing register form
@@ -164,12 +166,16 @@ app.post("/login", function (req, res, next) {
 
 // Showing account
 app.get("/account", isLoggedIn, function (req, res) {
-  res.render("account");
+  res.render("account", {
+    user: req.user.username
+  });
 });
 
 // Showing changepass
 app.get("/changepass", isLoggedIn, function (req, res) {
-  res.render("changePass");
+  res.render("changePass", {
+    user: req.user.username
+  });
 });
 
 // Password change
@@ -206,17 +212,23 @@ app.post("/changepass", isLoggedIn, async function (req, res) {
 
 // Showing security
 app.get("/security", isLoggedIn, function (req, res) {
-  res.render("security");
+  res.render("security", {
+    user: req.user.username
+  });
 });
 
 // Showing settings
 app.get("/settings", isLoggedIn, function (req, res) {
-  res.render("settings");
+  res.render("settings", {
+    user: req.user.username
+  });
 });
 
 // Showing support form
 app.get("/support", function (req, res) {
-  res.render("support");
+  res.render("support", {
+    user: req.user.username
+  });
 });
 
 //Handling user logout
@@ -231,12 +243,16 @@ app.get("/logout", isLoggedIn, function (req, res) {
 
 //Show admin lock
 app.get("/adminlock", isLoggedIn, function (req, res) {
-  res.render("adminLock");
+  res.render("adminLock", {
+    user: req.user.username
+  });
 });
 
 // Show admin post
 app.get("/adminPost", isLoggedIn, function (req, res) {
-  res.render("adminPost");
+  res.render("adminPost", {
+    user: req.user.username
+  });
 });
 
 // Show admin communities
@@ -253,54 +269,60 @@ app.get("/adminPost", isLoggedIn, function (req, res) {
 // user rating recipes
 
 app.get("/recipes", isLoggedIn, (req, res) => {
-  res.render("recipePage");
+  res.render("recipePage", {
+    user: req.user.username
+  });
 });
 
 // user create post
 
 app.get("/createpost", isLoggedIn, (req, res) => {
-  res.render("createPost");
+  res.render("createPost", {
+    user: req.user.username
+  });
 });
 
 // comment
 app.get("/comment", isLoggedIn, (req, res) => {
-  res.render("comment");
+  res.render("comment", {
+    user: req.user.username
+  });
 });
 
 
 
 app.post("/createpost", upload.single('photos'), async function (req, res, next) {
-  if(req.file) {
+
     const post = await Post.create({
       title: req.body.title,
       description: req.body.content,
       userId: req.user.id,
       username: req.user.username,
       image: req.file.filename
-    });}
-  else {
-    const post = await Post.create({
-      title: req.body.title,
-      description: req.body.content,
-      id: req.user.id,
-      username: req.user.username  
-    })};
+    });
   setTimeout(() => {
     res.redirect("/profile");
   }, 500);
 })
 
 // user profile
-app.get("/profile", isLoggedIn, async (req, res) => {
-  const posts =  await Post.find({userId: req.user.id});
+app.get("/profile/:username", isLoggedIn, async (req, res) => {
+  const username = req.params.username;
+
+  const user = await User.findOne({ username });
+  
+  if (user) {
+  const posts =  await Post.find({userId: user.id});
   res.render("profile", {
     posts
-  });
+  });}
 });
 
 // user search
 app.get("/search", isLoggedIn, (req, res) => {
-  res.render("searchPage");
+  res.render("searchPage", {
+    user: req.user.username
+  });
 });
 
 function isLoggedIn(req, res, next) {

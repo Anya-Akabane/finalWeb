@@ -24,7 +24,7 @@ var post = new Schema({
     ],
     image: {
         type: String,
-        default: "1716906028797-th-2339855844.jpg"
+        required: true
     },
     date: {
         type: Date,

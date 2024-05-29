@@ -99,7 +99,7 @@
 
 
             <li class="nav-link">
-              <a href="/profile" class="dropdown-toggle">
+              <a href="/profile/<%= user %>" class="dropdown-toggle">
                 <i class="icon"
                   ><img src="/images/userLogin.png" width="30px"
                 /></i>
@@ -176,7 +176,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="/profile" class="nav__link">
+              <a href="/profile/<%= user %>" class="nav__link">
                 <img src="/images/userLogin.png" width="25px" class="nav__icon" />
                 <span class="nav__name">Profile</span>
               </a>
@@ -370,7 +370,7 @@
               <div class="box-design">
                 <div class="post-upload-T">
                   <div class="profil-ing-div">
-                    <a href="/profile" id="profile-link">
+                    <a href="/profile/<%= user %>" id="profile-link">
                       <img id="Profile_images" src="/images/userLogin.png" />
                     </a>
                   </div>

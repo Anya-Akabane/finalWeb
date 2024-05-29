@@ -1254,7 +1254,7 @@ body.dark .lcs-btn p i {
 	width: 100%;
 	border: none;
 	outline: none;
-  color:var(--first-color);
+  color:var(--primary-color);
 	box-sizing: border-box;
 	background-color: #E4E6E9;
 	border-radius: 20px;

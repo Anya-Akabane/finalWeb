@@ -304,7 +304,7 @@ app.post(
       image: req.file.filename,
     });
     setTimeout(() => {
-      res.redirect("/profile");
+      res.redirect("/profile/<%= req.user.id%>");
     }, 500);
   }
 );

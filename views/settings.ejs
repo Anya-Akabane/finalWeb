@@ -195,13 +195,14 @@
         <div class="sub-menus-wrap" id="subMenus">
           <div class="sub-menus">
             <div class="user-info">
-              <a href="/profile" class="sub-menus-link">
+              <% console.log(user.id)%>
+              <a href="/profile/<%= user.id%>" class="sub-menus-link">
                 <img
                   src="/images/profile.png"
                   alt="profile"
                   class="profile-pic"
                 />
-                <h3>Kanna Kamui</h3>
+                <h3><%= user.username%></h3>
               </a>
               
             </div>

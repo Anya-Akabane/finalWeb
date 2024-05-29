@@ -11,33 +11,36 @@ const bcrypt = require("bcrypt");
 const { name } = require("ejs");
 const session = require("express-session");
 let app = express();
-const multer  = require('multer')
+const multer = require("multer");
 // Configure Multer storage
 const storage = multer.diskStorage({
   // Set the destination directory for uploaded files
   destination: (req, file, cb) => {
-    cb(null, 'public/uploads/'); // Files will be saved in the 'uploads/' directory
+    cb(null, "public/uploads/"); // Files will be saved in the 'uploads/' directory
   },
   // Set the filename for uploaded files
   filename: (req, file, cb) => {
     // Prepend the current timestamp to the original filename to ensure uniqueness
-    cb(null, Date.now() + '-' + file.originalname);
-  }
+    cb(null, Date.now() + "-" + file.originalname);
+  },
 });
 
 const fileFilter = (req, file, cb) => {
   // Accept only image files (jpeg, png)
-  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+  if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
     cb(null, true);
   } else {
-    cb(new Error('Invalid file type. Only JPEG and PNG files are allowed.'), false);
+    cb(
+      new Error("Invalid file type. Only JPEG and PNG files are allowed."),
+      false
+    );
   }
 };
 
 // Create a Multer instance with the configured storage settings
-const upload = multer({ 
-  storage: storage ,
-  fileFilter: fileFilter
+const upload = multer({
+  storage: storage,
+  fileFilter: fileFilter,
 });
 
 mongoose.connect(
@@ -72,7 +75,7 @@ passport.use(
       try {
         // Find the user by email in the database
         const user = await User.findOne({ email });
-        console.log("user" + user)
+        console.log("user" + user);
         // If the user does not exist, return an error
         if (!user) {
           return done(null, false, { error: "Incorrect email" });
@@ -118,7 +121,7 @@ app.get("/", function (req, res) {
 // Showing secret page
 app.get("/thread", isLoggedIn, function (req, res) {
   res.render("thread", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 
@@ -167,14 +170,14 @@ app.post("/login", function (req, res, next) {
 // Showing account
 app.get("/account", isLoggedIn, function (req, res) {
   res.render("account", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 
 // Showing changepass
 app.get("/changepass", isLoggedIn, function (req, res) {
   res.render("changePass", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 
@@ -213,21 +216,21 @@ app.post("/changepass", isLoggedIn, async function (req, res) {
 // Showing security
 app.get("/security", isLoggedIn, function (req, res) {
   res.render("security", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 
 // Showing settings
 app.get("/settings", isLoggedIn, function (req, res) {
   res.render("settings", {
-    user: req.user.username
+    user: req.user,
   });
 });
 
 // Showing support form
 app.get("/support", function (req, res) {
   res.render("support", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 
@@ -244,14 +247,14 @@ app.get("/logout", isLoggedIn, function (req, res) {
 //Show admin lock
 app.get("/adminlock", isLoggedIn, function (req, res) {
   res.render("adminLock", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 
 // Show admin post
 app.get("/adminPost", isLoggedIn, function (req, res) {
   res.render("adminPost", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 
@@ -270,7 +273,7 @@ app.get("/adminPost", isLoggedIn, function (req, res) {
 
 app.get("/recipes", isLoggedIn, (req, res) => {
   res.render("recipePage", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 
@@ -278,50 +281,59 @@ app.get("/recipes", isLoggedIn, (req, res) => {
 
 app.get("/createpost", isLoggedIn, (req, res) => {
   res.render("createPost", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 
 // comment
 app.get("/comment", isLoggedIn, (req, res) => {
   res.render("comment", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 
-
-
-app.post("/createpost", upload.single('photos'), async function (req, res, next) {
-
+app.post(
+  "/createpost",
+  upload.single("photos"),
+  async function (req, res, next) {
     const post = await Post.create({
       title: req.body.title,
       description: req.body.content,
       userId: req.user.id,
       username: req.user.username,
-      image: req.file.filename
+      image: req.file.filename,
     });
-  setTimeout(() => {
-    res.redirect("/profile");
-  }, 500);
-})
+    setTimeout(() => {
+      res.redirect("/profile");
+    }, 500);
+  }
+);
 
 // user profile
 app.get("/profile/:username", isLoggedIn, async (req, res) => {
-  const username = req.params.username;
+  try {
+    console.log(req.params.username);
+    const username = req.params.username;
 
-  const user = await User.findOne({ username });
-  
-  if (user) {
-  const posts =  await Post.find({userId: user.id});
-  res.render("profile", {
-    posts
-  });}
+    const user = await User.findOne({ username });
+
+    if (user) {
+      const posts = await Post.find({ userId: user.id });
+      res.render("profile", {
+        posts,
+      });
+    }
+    const posts = await Post.find({ userId: req.user.id });
+    res.render("profile", { user: req.user, posts: posts });
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 // user search
 app.get("/search", isLoggedIn, (req, res) => {
   res.render("searchPage", {
-    user: req.user.username
+    user: req.user.username,
   });
 });
 

@@ -184,7 +184,11 @@ body.dark .sidebar header .toggle {
   font-size: 16px;
   font-weight: 500;
   background: var(--primary-color-light);
-  transition: var(--tran-05);
+  transition: var(--tran-05); 
+}
+
+.search-box:focus-within{
+  box-shadow: 0 0 10px #9ecaed;
 }
 
 .sidebar li a {

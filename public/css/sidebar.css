@@ -366,7 +366,12 @@ body.dark .switch::before {
     --z-fixed: 100;
   }
 
-  .sidebar.close ~ .home {
+    .sidebar.close ~ .home {
+    left: 0;
+    width: 100%;
+  }
+
+  .sidebar ~ .home {
     left: 0;
     width: 100%;
   }

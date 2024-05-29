@@ -114,8 +114,7 @@ body.dark label {
 .form-group input,
 textarea,
 select {
-  width: 100%;
-  width: 400px;
+  width: 300px;
   margin-bottom: 10px;
   padding: 15px;
   border-radius: 20px;
@@ -174,7 +173,7 @@ body.dark label + select {
   textarea,
   select {
     width: 100%;
-
+    width: 400px;
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 20px;

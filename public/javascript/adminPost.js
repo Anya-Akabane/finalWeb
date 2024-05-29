@@ -9,6 +9,16 @@ toggle.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });
 
+toggle.setAttribute('aria-label', 'Toggle sidebar');
+toggle.setAttribute('tabindex', '0');
+toggle.setAttribute('role', 'toggle button');
+
+toggle.addEventListener('keydown', function (e) {
+  if (e.code === 'Enter') {
+    sidebar.classList.toggle("close");
+  }
+});
+
 searchBtn.addEventListener("click", () => {
   sidebar.classList.remove("close");
 });

@@ -376,6 +376,11 @@ body.dark .switch::before {
     width: 100%;
   }
 
+  .sidebar ~ .home {
+    left: 0;
+    width: 100%;
+  }
+
   html {
     scroll-behavior: smooth;
   }

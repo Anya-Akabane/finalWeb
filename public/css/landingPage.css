@@ -98,11 +98,20 @@ h6 {
   background-color: #a03dd1;
 }
 
+.btn-primary:focus-visible {
+  background-color: #a03dd1;
+}
+
 .btn-secondary {
   border: 1px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-secondary:focus-visible {
   background-color: var(--primary-color);
   color: #fff;
 }

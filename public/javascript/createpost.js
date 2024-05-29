@@ -97,3 +97,4 @@ fileInput.onchange = function() {
       previewImage();
     }
 };
+

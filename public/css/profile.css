@@ -577,7 +577,7 @@ body.dark .switch::before {
 }
 
 .hero nav {
-  padding: 10px 5%;
+  padding: 5px;
   display: flex;
   justify-content: flex-end;
   align-items: center;

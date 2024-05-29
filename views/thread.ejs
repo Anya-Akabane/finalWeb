@@ -99,7 +99,7 @@
 
 
             <li class="nav-link">
-              <a href="/profile/<%= user %>" class="dropdown-toggle">
+              <a href="/profile/<%= user.id %>" class="dropdown-toggle">
                 <i class="icon"
                   ><img src="/images/userLogin.png" width="30px"
                 /></i>
@@ -109,7 +109,7 @@
           </ul>
         </div>
         <div class="bottom-content">
-          <li class="">
+          <li class="nav-link">
             <a href="/logout">
               <i class="bx bx-log-out icon"></i>
               <span class="text nav-text">Log out</span>
@@ -176,7 +176,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="/profile/<%= user %>" class="nav__link">
+              <a href="/profile/<%= user.id %>" class="nav__link">
                 <i class='bx bx-user-circle nav__icon'></i>
                 <!-- <img src="/images/userLogin.png" width="25px" class="nav__icon" /> -->
                 <span class="nav__name">Profile</span>
@@ -860,7 +860,7 @@
         </div>
       </div>
     </section>
-
+    
     <script src="/javascript/profile.js"></script>
   </body>
 </html>

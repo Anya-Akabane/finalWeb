@@ -72,11 +72,11 @@
 
 
             <li class="nav-link">
-              <a href="/profile" class="dropdown-toggle">
+              <a href="/profile/<%= user.id%>" class="dropdown-toggle">
                 <i class="icon"
                   ><img src="/images/profile.png" width="30px"
                 /></i>
-                <span class="text nav-text">Kanna Kamui</span>
+                <span class="text nav-text"><%= user.username%></span>
               </a>
             </li>
           </ul>
@@ -180,11 +180,17 @@
           onclick="toggleMenus()"
         />
 
-        <div class="sub-menus-wrap" id="subMenus">
+          <div class="sub-menus-wrap" id="subMenus">
           <div class="sub-menus">
             <div class="user-info">
-              <img src="/images/profile.png" />
-              <h3>Kanna Kamui</h3>
+              <a href="/profile/<%= user.id%>" class="sub-menus-link">
+                <img
+                  src="/images/userLogin.png"
+                  alt="profile"
+                  class="profile-pic"
+                />
+                <h3><%= user.username%></h3>
+              </a>
             </div>
             <hr />
 

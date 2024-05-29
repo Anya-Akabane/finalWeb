@@ -97,11 +97,11 @@
 
 
             <li class="nav-link">
-              <a href="/profile" class="dropdown-toggle">
+              <a href="/profile/<%= user.id%>" class="dropdown-toggle">
                 <i class="icon"
                   ><img src="/images/userLogin.png" width="30px"
                 /></i>
-                <span class="text nav-text">Kanna Kamui</span>
+                <span class="text nav-text"><%= user.username%></span>
               </a>
             </li>
           </ul>
@@ -174,7 +174,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="/profile" class="nav__link">
+              <a href="/profile/<%= user.id%>" class="nav__link">
                 <img src="/images/userLogin.png" width="25px" class="nav__icon" />
                 <span class="nav__name">Profile</span>
               </a>
@@ -201,13 +201,13 @@
         <div class="sub-menus-wrap" id="subMenus">
           <div class="sub-menus">
             <div class="user-info">
-              <a href="" class="sub-menus-link">
+              <a href="/profile/<%= user.id%>" class="sub-menus-link">
                 <img
                   src="/images/userLogin.png"
                   alt="profile"
                   class="profile-pic"
                 />
-                <h3>User</h3>
+                <h3><%= user.username%></h3>
               </a>
             </div>
             <hr />

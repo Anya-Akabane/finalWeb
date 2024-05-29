@@ -104,7 +104,7 @@
                 <i class="icon"
                   ><img src="/images/profile.png" width="30px"
                 /></i>
-                <span class="text nav-text">Kanna Kamui</span>
+                <span class="text nav-text"><%= user.username%></span>
               </a>
             </li>
           </ul>
@@ -254,7 +254,7 @@
               </div>
 
               <div class="profile-name">
-                <p>Kanna Kamui</p>
+                <p><%= user.username%></p>
 
                 <div class="btn">
                     <button class="btn-change">Change Profile Picture</button>
@@ -266,7 +266,7 @@
                 <form action="" id="myForm">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" placeholder="Kanna Kamui">
+                        <input type="text" name="name" id="name" placeholder="<%= user.username%>">
                      </div>
                      <div class="form-group">
                         <label for="nickName">Nickname:</label>

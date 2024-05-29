@@ -121,7 +121,7 @@ app.get("/", function (req, res) {
 // Showing secret page
 app.get("/thread", isLoggedIn, function (req, res) {
   res.render("thread", {
-    user: req.user.username,
+    user: req.user,
   });
 });
 
@@ -170,14 +170,14 @@ app.post("/login", function (req, res, next) {
 // Showing account
 app.get("/account", isLoggedIn, function (req, res) {
   res.render("account", {
-    user: req.user.username,
+    user: req.user,
   });
 });
 
 // Showing changepass
 app.get("/changepass", isLoggedIn, function (req, res) {
   res.render("changePass", {
-    user: req.user.username,
+    user: req.user,
   });
 });
 
@@ -216,7 +216,7 @@ app.post("/changepass", isLoggedIn, async function (req, res) {
 // Showing security
 app.get("/security", isLoggedIn, function (req, res) {
   res.render("security", {
-    user: req.user.username,
+    user: req.user,
   });
 });
 
@@ -230,7 +230,7 @@ app.get("/settings", isLoggedIn, function (req, res) {
 // Showing support form
 app.get("/support", function (req, res) {
   res.render("support", {
-    user: req.user.username,
+    user: req.user,
   });
 });
 
@@ -247,14 +247,14 @@ app.get("/logout", isLoggedIn, function (req, res) {
 //Show admin lock
 app.get("/adminlock", isLoggedIn, function (req, res) {
   res.render("adminLock", {
-    user: req.user.username,
+    user: req.user,
   });
 });
 
 // Show admin post
 app.get("/adminPost", isLoggedIn, function (req, res) {
   res.render("adminPost", {
-    user: req.user.username,
+    user: req.user,
   });
 });
 
@@ -273,7 +273,7 @@ app.get("/adminPost", isLoggedIn, function (req, res) {
 
 app.get("/recipes", isLoggedIn, (req, res) => {
   res.render("recipePage", {
-    user: req.user.username,
+    user: req.user,
   });
 });
 
@@ -281,14 +281,14 @@ app.get("/recipes", isLoggedIn, (req, res) => {
 
 app.get("/createpost", isLoggedIn, (req, res) => {
   res.render("createPost", {
-    user: req.user.username,
+    user: req.user,
   });
 });
 
 // comment
 app.get("/comment", isLoggedIn, (req, res) => {
   res.render("comment", {
-    user: req.user.username,
+    user: req.user,
   });
 });
 

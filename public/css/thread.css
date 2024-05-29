@@ -358,7 +358,7 @@ body.dark .switch::before {
     --first-color-alt: hsl(var(--hue), var(--sat), 36%);
     --title-color: hsl(var(--hue), 12%, 15%);
     --text-color: hsl(var(--hue), 8%, 35%);
-    --body-color: hsl(var(--hue), 100%, 99%);
+    /* --body-color: hsl(var(--hue), 100%, 99%); */
     --container-color: #fff;
 
     /* --body-font: "Poppins", sans-serif; */
@@ -582,7 +582,7 @@ body.dark .switch::before {
 }
 
 .hero nav {
-  padding: 10px 5%;
+  padding: 5px;
   display: flex;
   justify-content: flex-end;
   align-items: center;

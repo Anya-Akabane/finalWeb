@@ -1,0 +1,43 @@
+
+.success-message {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    top: 20rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.success-message h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.success-message p {
+    margin: 10px 0 0;
+    font-size: 1em;
+}
+
+@media (max-width: 600px) {
+    .success-message {
+        width: 90%;
+    }
+
+    .success-message h2 {
+        font-size: 1.2em;
+    }
+
+    .success-message p {
+        font-size: 0.9em;
+    }
+}

@@ -201,16 +201,32 @@ let activ_navbar = document.querySelector(".activ-navbar");
 //   post_icon_btn_4i.classList.toggle("like-controle");
 // });
 
-const menuContainer = document.querySelector(".menu-container");
-const menuBtn = document.querySelector(".menu-btn");
-const dropdownMenu = document.querySelector(".dropdown-menu");
+const menuContainer = document.querySelectorAll(".menu-container");
+const menuBtn = document.querySelectorAll(".menu-btn");
+const dropdownMenu = document.querySelectorAll(".dropdown-menu");
 
-menuBtn.addEventListener("click", () => {
-  dropdownMenu.classList.toggle("show");
+menuBtn.forEach((btn, index) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdownMenu[index].classList.toggle("show");
+  });
 });
 
-menuContainer.addEventListener("focusout", (event) => {
-  if (!event.currentTarget.contains(event.relatedTarget)) {
-    dropdownMenu.classList.remove("show");
-  }
-});
+// menuBtn.addEventListener("click", () => {
+//   dropdownMenu.classList.toggle("show");
+// });
+
+menuContainer.forEach(container =>{
+  container.addEventListener("focusout", (event) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) {
+      dropdownMenu.classList.remove("show");
+    }
+  });
+
+})
+
+// menuContainer.addEventListener("focusout", (event) => {
+//   if (!event.currentTarget.contains(event.relatedTarget)) {
+//     dropdownMenu.classList.remove("show");
+//   }
+// });

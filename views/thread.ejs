@@ -495,16 +495,19 @@
                       <a href="%">5min</a>
                     </p>
 
-                   <div class="menu-container">
+                   
+                    <% if(user.username = post.username || user.isAdmin) {%>
+                    <div class="menu-container">
                       <button class="menu-btn">
                           <span class="fas fa-ellipsis-h"></span>
                       </button>
                       <div class="dropdown-menu">
-                          <a href="#">Save</a>
-                          <a href="#">Hide</a>
-                          <a href="#">Report</a>
+                          <a href="#">Delete(Archive)</a>
                       </div>
-                  </div>
+                      
+                  
+                    </div>
+                    <% } %>
 
                   </div>
                 </div>

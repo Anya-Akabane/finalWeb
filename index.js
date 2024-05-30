@@ -353,3 +353,10 @@ let port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log("Server Has Started on port 3000!");
 });
+
+// delete post
+app.get("/delete", isLoggedIn, async (req, res) => {
+  res.render("deletePost", {
+    user: req.user,
+  });
+});

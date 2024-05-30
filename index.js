@@ -151,7 +151,7 @@ app.get("/login", function (req, res) {
   if (req.session.email) {
     res.redirect("/thread");
   }
-  return res.render("login", { error: null });
+  return res.render("login");
 });
 
 //Handling user login

@@ -471,6 +471,70 @@
                 </div>
               </div>
 
+              <% posts.forEach((post) => { %>
+                <div class="box-design post-div">
+                <div class="post-information">
+                  <div>
+                    <div class="profil-ing-div post-profile-img">
+                      <a href="#" id="profile-link">
+                        <img id="Profile_images" src="/images/user-img.jpg" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="post-three-dot">
+                    <h2><a href="#" id="profile_name"><%= post.username %></a></h2>
+                    <p>
+                      <a href="%">5min</a>
+                    </p>
+
+                    <span class="thre-dto-btn fas fa-ellipsis-h"></span>
+                  </div>
+                </div>
+
+                <div class="post-text-show">
+                  <p><%= post.title %></p>
+                  <p><%= post.description %></p>
+                </div>
+
+                
+                <% if(post.image !== null) { %>
+                <img id="post-image-12"
+                  class="post-images"
+                  src= "/uploads/<%= post.image %>"
+                > 
+                <% } %>
+
+                <div class="actavite">
+                  <div class="lcs-btn lcs-btn_i">
+                    <p>
+                      <i id="post-icon-btn_i" class="far fa-thumbs-up"></i>
+                      <span id="post-icon-text_i">Like</span>
+                    </p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="far fa-comment-alt"></i> Comment</p>
+                  </div>
+                  <div class="lcs-btn">
+                    <p><i class="fas fa-share"></i> Share</p>
+                  </div>
+                </div>
+
+                <div class="comment-site">
+                  <div class="profil-ing-div">
+                    <a href="#" id="profile-link">
+                      <img id="Profile_images" src="/images/user-img.jpg" />
+                    </a>
+                  </div>
+                  <a href="/comment/<%= post.id %>">
+                    <div class="comment-input">
+                        Write a comment…
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <% }) %>
+              
               <!-- no image -->
               <div class="box-design post-div">
                 <div class="post-information">

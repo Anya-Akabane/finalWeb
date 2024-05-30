@@ -18,6 +18,10 @@ var comment = new Schema({
             ref: "Comment"
         }
     ],
+    archived: {
+        type: Boolean,
+        default: false
+    },
 });
 
 comment.plugin(passportLocalMongoose);

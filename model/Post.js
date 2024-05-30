@@ -34,6 +34,10 @@ var post = new Schema({
         type: String,
         ref: 'Likes'
     }],
+    archived: {
+        type: Boolean,
+        default: false
+    },
 });
 
 post.plugin(passportLocalMongoose);

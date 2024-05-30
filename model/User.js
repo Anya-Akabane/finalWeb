@@ -33,6 +33,10 @@ var User = new Schema({
     image: {
         type: String
     },
+    archived: {
+        type: Boolean,
+        default: false
+    },
 })
  
 User.plugin(passportLocalMongoose);

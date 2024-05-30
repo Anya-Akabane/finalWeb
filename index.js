@@ -119,9 +119,11 @@ app.get("/", function (req, res) {
 });
 
 // Showing secret page
-app.get("/thread", isLoggedIn, function (req, res) {
+app.get("/thread", isLoggedIn, async function (req, res) {
+  const posts = await Post.find({ archived: false });
   res.render("thread", {
     user: req.user,
+    posts
   });
 });
 
@@ -286,9 +288,14 @@ app.get("/createpost", isLoggedIn, (req, res) => {
 });
 
 // comment
-app.get("/comment", isLoggedIn, (req, res) => {
+app.get("/comment/:id", isLoggedIn, async (req, res) => {
+  const id = req.params.id;
+
+  const posts = await Post.find({ _id: id});
+  
   res.render("comment", {
-    user: req.user,
+    user: req.user.username,
+    posts: posts
   });
 });
 
@@ -304,7 +311,7 @@ app.post(
       image: req.file.filename,
     });
     setTimeout(() => {
-      res.redirect("/profile/<%= req.user.id%>");
+      res.redirect("/profile/" + req.user.id);
     }, 500);
   }
 );
@@ -318,12 +325,12 @@ app.get("/profile/:username", isLoggedIn, async (req, res) => {
     const user = await User.findOne({ username });
 
     if (user) {
-      const posts = await Post.find({ userId: user.id });
+      const posts = await Post.find({ userId: user.id , archived: false});
       res.render("profile", {
         posts,
       });
     }
-    const posts = await Post.find({ userId: req.user.id });
+    const posts = await Post.find({ userId: req.user.id, archived: false });
     res.render("profile", { user: req.user, posts: posts });
   } catch (err) {
     console.log(err);

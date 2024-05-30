@@ -22,3 +22,16 @@ darkModeToggle.addEventListener("click", () => {
 })
 
 // 3dot
+// const menuContainer = document.querySelector(".menu-container");
+// const menuBtn = document.querySelector(".menu-btn");
+// const dropdownMenu = document.querySelector(".dropdown-menu");
+
+// menuBtn.addEventListener("click", () => {
+//   dropdownMenu.classList.toggle("show");
+// });
+
+// menuContainer.addEventListener("focusout", (event) => {
+//   if (!event.currentTarget.contains(event.relatedTarget)) {
+//     dropdownMenu.classList.remove("show");
+//   }
+// });

@@ -1187,6 +1187,10 @@ body.dark .post-information div p a {
     font-size: 24px;
 }
 
+body.dark .menu-btn {
+  color: #fff;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -1198,6 +1202,10 @@ body.dark .post-information div p a {
     border-radius: 20px;
 }
 
+body.dark .dropdown-menu {
+  background-color: var(--primary-color-light);
+}
+
 .dropdown-menu a {
     color: black;
     padding: 12px 16px;
@@ -1206,9 +1214,19 @@ body.dark .post-information div p a {
 
 }
 
+body.dark .dropdown-menu a {
+  color: #fff;
+}
+
+
+
 .dropdown-menu a:hover {
-    background-color: #f1f1f1;
+  background-color: #fecce1;
     border-radius: 20px;
+}
+
+body.dark .dropdown-menu a:hover {
+  background-color: #feb6d4;
 }
 
 .show {

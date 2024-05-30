@@ -154,52 +154,52 @@ lcs_btn_i.addEventListener("click", function () {
 
 let activ_navbar = document.querySelector(".activ-navbar");
 
-let lcs_btn_0i = document.querySelector(".lcs-btn_0i");
-let post_icon_btn_0i = document.querySelector("#post-icon-btn_0i");
-let post_icon_text_0i = document.querySelector("#post-icon-text_0i");
+// let lcs_btn_0i = document.querySelector(".lcs-btn_0i");
+// let post_icon_btn_0i = document.querySelector("#post-icon-btn_0i");
+// let post_icon_text_0i = document.querySelector("#post-icon-text_0i");
 
-lcs_btn_0i.addEventListener("click", function () {
-  post_icon_btn_0i.classList.toggle("fas");
-  post_icon_text_0i.innerHTML = "Like";
-  post_icon_text_0i.classList.toggle("like-controle");
-  post_icon_btn_0i.classList.toggle("like-controle");
-});
-
-
-let lcs_btn_2i = document.querySelector(".lcs-btn_2i");
-let post_icon_btn_2i = document.querySelector("#post-icon-btn_2i");
-let post_icon_text_2i = document.querySelector("#post-icon-text_2i");
-
-lcs_btn_2i.addEventListener("click", function () {
-  post_icon_btn_2i.classList.toggle("fas");
-  post_icon_text_2i.innerHTML = "Like";
-  post_icon_text_2i.classList.toggle("like-controle");
-  post_icon_btn_2i.classList.toggle("like-controle");
-});
+// lcs_btn_0i.addEventListener("click", function () {
+//   post_icon_btn_0i.classList.toggle("fas");
+//   post_icon_text_0i.innerHTML = "Like";
+//   post_icon_text_0i.classList.toggle("like-controle");
+//   post_icon_btn_0i.classList.toggle("like-controle");
+// });
 
 
+// let lcs_btn_2i = document.querySelector(".lcs-btn_2i");
+// let post_icon_btn_2i = document.querySelector("#post-icon-btn_2i");
+// let post_icon_text_2i = document.querySelector("#post-icon-text_2i");
 
-let lcs_btn_3i = document.querySelector(".lcs-btn_3i");
-let post_icon_btn_3i = document.querySelector("#post-icon-btn_3i");
-let post_icon_text_3i = document.querySelector("#post-icon-text_3i");
+// lcs_btn_2i.addEventListener("click", function () {
+//   post_icon_btn_2i.classList.toggle("fas");
+//   post_icon_text_2i.innerHTML = "Like";
+//   post_icon_text_2i.classList.toggle("like-controle");
+//   post_icon_btn_2i.classList.toggle("like-controle");
+// });
 
-lcs_btn_3i.addEventListener("click", function () {
-  post_icon_btn_3i.classList.toggle("fas");
-  post_icon_text_3i.innerHTML = "Like";
-  post_icon_text_3i.classList.toggle("like-controle");
-  post_icon_btn_3i.classList.toggle("like-controle");
-});
 
-let lcs_btn_4i = document.querySelector(".lcs-btn_4i");
-let post_icon_btn_4i = document.querySelector("#post-icon-btn_4i");
-let post_icon_text_4i = document.querySelector("#post-icon-text_4i");
 
-lcs_btn_4i.addEventListener("click", function () {
-  post_icon_btn_4i.classList.toggle("fas");
-  post_icon_text_4i.innerHTML = "Like";
-  post_icon_text_4i.classList.toggle("like-controle");
-  post_icon_btn_4i.classList.toggle("like-controle");
-});
+// let lcs_btn_3i = document.querySelector(".lcs-btn_3i");
+// let post_icon_btn_3i = document.querySelector("#post-icon-btn_3i");
+// let post_icon_text_3i = document.querySelector("#post-icon-text_3i");
+
+// lcs_btn_3i.addEventListener("click", function () {
+//   post_icon_btn_3i.classList.toggle("fas");
+//   post_icon_text_3i.innerHTML = "Like";
+//   post_icon_text_3i.classList.toggle("like-controle");
+//   post_icon_btn_3i.classList.toggle("like-controle");
+// });
+
+// let lcs_btn_4i = document.querySelector(".lcs-btn_4i");
+// let post_icon_btn_4i = document.querySelector("#post-icon-btn_4i");
+// let post_icon_text_4i = document.querySelector("#post-icon-text_4i");
+
+// lcs_btn_4i.addEventListener("click", function () {
+//   post_icon_btn_4i.classList.toggle("fas");
+//   post_icon_text_4i.innerHTML = "Like";
+//   post_icon_text_4i.classList.toggle("like-controle");
+//   post_icon_btn_4i.classList.toggle("like-controle");
+// });
 
 const menuContainer = document.querySelector(".menu-container");
 const menuBtn = document.querySelector(".menu-btn");

@@ -155,7 +155,7 @@ app.post("/register", async (req, res) => {
 // });
 
 app.get("/login", function (req, res) {
-  res.render("login");
+  res.render("logIn");
 });
 
 //Handling user login

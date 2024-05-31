@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- css -->
-    <link rel="stylesheet" href="/public/css/sidebar.css" />
+    <link rel="stylesheet" href="/css/sidebar.css" />
 
-    <link rel="stylesheet" href="/public/css/deletePost.css" />
+    <link rel="stylesheet" href="/css/deletePost.css" />
 
 
     <!-- Boxicons CSS -->
@@ -19,17 +19,19 @@
     <title>Lock/Unlock Users</title>
   </head>
   <body>
-    <!-- sidebar -->
     <nav class="sidebar close">
       <header>
         <div class="image-text">
           <span class="image">
-            <img src="/images/logo-cookchat.png" alt="logo" />
+            <a href="">
+              <img src="/images/logo-cookchat.png" alt="logo" />
+            </a>
           </span>
 
           <div class="text header-text">
-            
-            <span class="name">COOKCHAT</span>
+            <a href="/thread">
+              <span class="name">COOKCHAT</span>
+            </a>
           </div>
         </div>
 
@@ -51,39 +53,60 @@
               </a>
             </li>
             <li class="nav-link">
-              <a href="/adminLock">
-                <i class='bx bx-box icon'></i>
-                <span class="text nav-text">Lock Users</span>
+              <a href="/recipes">
+                <i class="bx bx-bowl-hot icon"></i>
+                <span class="text nav-text">Recipes</span>
               </a>
             </li>
-<!-- 
-            <li class="nav-link">
-              <a href="/adminThread">
-                <i class='bx bx-box icon'></i>
-                <span class="text nav-text">Archive Communities</span>
+
+            <!-- <li class="nav-link">
+              <a href="/save">
+                <i class="bx bx-bookmark icon"></i>
+                <span class="text nav-text">Save</span>
               </a>
             </li> -->
 
             <li class="nav-link">
-              <a href="/adminPost">
-                <i class='bx bx-at icon'></i>
-                <span class="text nav-text">Archive Posts</span>
+              <a href="/createPost">
+                <i class="bx bxs-plus-square icon"></i>
+                <span class="text nav-text">Create Post</span>
+              </a>
+            </li>
+
+            <!-- <li class="nav-link">
+              <a href="#" class="dropdown-toggle">
+                <i class="bx bx-group icon"></i>
+                <span class="text nav-text">Communities</span>
+              </a>
+            </li> -->
+
+             <li class="nav-link">
+              <a href="/settings" class="dropdown-toggle">
+                <i class="bx bx-cog icon"></i>
+                <span class="text nav-text">Settings</span>
+              </a>
+            </li>
+
+              <li class="nav-link">
+              <a href="/support">
+                <i class='bx bx-help-circle icon'></i>
+                <span class="text nav-text">Support</span>
               </a>
             </li>
 
 
             <li class="nav-link">
-              <a href="/profile/<%= user.id%>" class="dropdown-toggle">
+              <a href="/profile/<%= user.id %>" class="dropdown-toggle">
                 <i class="icon"
-                  ><img src="/images/profile.png" width="30px"
+                  ><img src="/images/userLogin.png" width="30px"
                 /></i>
-                <span class="text nav-text"><%= user.username%></span>
+                <span class="text nav-text"> <%= user.username%> </span>
               </a>
             </li>
           </ul>
         </div>
         <div class="bottom-content">
-          <li class="">
+          <li class="nav-link">
             <a href="/logout">
               <i class="bx bx-log-out icon"></i>
               <span class="text nav-text">Log out</span>
@@ -115,73 +138,67 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="/thread" class="nav__link">
+              <a href="/thread" class="nav__link active-link">
                 <i class="bx bx-home-alt nav__icon"></i>
                 <span class="nav__name">Home</span>
               </a>
             </li>
 
-
-            <li class="nav__item">
-              <a href="/adminLock" class="nav__link active-link">
-                <i class="bx bx-box nav__icon"></i>
-                <span class="nav__name">Lock</span>
-              </a>
-            </li>
-
-            <li class="nav__item">
-              <a href="/adminPost" class="nav__link">
-                <i class="bx bx-at nav__icon"></i>
-                <span class="nav__name">Posts</span>
-              </a>
-            </li>
-
-             <!-- <li class="nav__item">
-              <a href="/adminThread" class="nav__link">
-                <i class="bx bx-box nav__icon"></i>
-                <span class="nav__name">Communities</span>
+            <!-- <li class="nav__item">
+              <a href="/search" class="nav__link">
+                <i class="bx bx-search nav__icon"></i>
+                <span class="nav__name">Search</span>
               </a>
             </li> -->
 
             <li class="nav__item">
-              <a href="/profile" class="nav__link">
-                <img
-                  src="/images/profile.png"
-                  width="25px"
-                  class="nav__icon"
-                />
+              <a href="/recipes" class="nav__link">
+                <i class="bx bx-bowl-hot nav__icon"></i>
+                <span class="nav__name">Recipes</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="/createPost" class="nav__link">
+                <i class="bx bx-plus-circle nav__icon"></i>
+                <span class="nav__name">Create</span>
+              </a>
+            </li>
+
+             <li class="nav__item">
+              <a href="/settings" class="nav__link">
+                <i class="bx bx-cog nav__icon"></i>
+                <span class="nav__name">Settings</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="/profile/<%= user.id %>" class="nav__link">
+                <i class='bx bx-user-circle nav__icon'></i>
+                <!-- <img src="/images/userLogin.png" width="25px" class="nav__icon" /> -->
                 <span class="nav__name">Profile</span>
               </a>
             </li>
           </ul>
         </div>
 
+        <!-- <img src="/images/userLogin.png" class="nav__img" width="40px"> -->
       </nav>
     </header>
 
     <div class="hero">
       <nav>
-        <!-- <ul class="notification-drop">
-    <li class="item">
-      <i class="bx bxs-bell notification-bell" aria-hidden="true"></i> <span class="btn__badge pulse-button ">4</span>     
-      
-      <ul>
-        <li>First Item</li>
-        <li>Second Item</li>
-        <li>Third Item</li>
-      </ul>
-    </li>
-  </ul> -->
+       
 
         <img
-          src="/images/user-img.jpg"
+          src="/images/userLogin.png"
           width="40px"
           alt="profile"
           class="user-pic"
           onclick="toggleMenus()"
         />
 
-          <div class="sub-menus-wrap" id="subMenus">
+        <div class="sub-menus-wrap" id="subMenus">
           <div class="sub-menus">
             <div class="user-info">
               <a href="/profile/<%= user.id%>" class="sub-menus-link">
@@ -201,13 +218,12 @@
             </a>
 
             <a href="/adminLock" class="sub-menus-link">
-              <i class='bx bxs-dashboard' ></i>
+              <i class="bx bxs-dashboard"></i>
               <p>Admin</p>
             </a>
 
-            <a class="sub-menus-link" id="darkModeToggle">
-              <i class="bx bx-moon
-              "></i>
+            <a href="#" class="sub-menus-link" id="darkModeToggle">
+              <i class="bx bx-moon"></i>
               <p>Switch Theme</p>
             </a>
 
@@ -239,6 +255,6 @@
       </section>
 
 
-    <script src="/public/javascript/sidebar.js"></script>
+    <script src="/javascript/sidebar.js"></script>
   </body>
 </html>

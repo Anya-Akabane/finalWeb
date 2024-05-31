@@ -286,7 +286,7 @@ app.get("/recipes", isLoggedIn, (req, res) => {
 // user create post
 
 app.get("/createpost", isLoggedIn, (req, res) => {
-  res.render("createPost", {
+  res.render("createpost", {
     user: req.user,
   });
 });

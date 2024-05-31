@@ -147,11 +147,15 @@ app.post("/register", async (req, res) => {
 });
 
 //Showing login form
+// app.get("/login", function (req, res) {
+//   if (req.session.email) {
+//     return res.redirect("/thread");
+//   }
+//   return res.render("login");
+// });
+
 app.get("/login", function (req, res) {
-  if (req.session.email) {
-    return res.redirect("/thread");
-  }
-  return res.render("login");
+  res.render("login");
 });
 
 //Handling user login
